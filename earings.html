@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>earings | ZAVELLA Luxury Jewellery</title>
+
+    <meta name="description" content="Discover the ZAVELLA luxury earings collection.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        Complimentary delivery on orders over Rs. 15,000
+    </div>
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <button
+                class="mobile-menu-btn"
+                type="button"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+            <a href="index.html" class="logo">
+                ZAVELLA<span>.</span>
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="rings.html">
+                    Rings
+                </a>
+
+                <a href="earings.html" class="active">
+                    earings
+                </a>
+
+                <a href="bracelets.html">
+                    Bracelets
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+            <div class="header-actions">
+
+                <button
+                    class="header-action"
+                    type="button"
+                    onclick="document.getElementById('earingsearch').focus()"
+                    aria-label="Search"
+                >
+                    ⌕
+                </button>
+
+                <a href="cart.html" class="header-action cart-link">
+                    ♡
+                    <span class="cart-count">0</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section
+            class="collection-banner"
+            style="background-image:url('images/model-6.jpg');"
+        >
+
+            <div class="collection-banner-content">
+
+                <div class="hero-eyebrow">
+                    ZAVELLA COLLECTION
+                </div>
+
+                <h1>
+                    earings
+                </h1>
+
+                <p>
+                    Elegant details that complete every look.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    earings
+                </div>
+
+                <h2>
+                    Elegance In Every Detail
+                </h2>
+
+                <p>
+                    Discover refined earings designed to add
+                    effortless sparkle to your everyday style.
+                </p>
+
+            </div>
+
+
+            <div
+                style="
+                    max-width:700px;
+                    margin:0 auto 40px;
+                "
+            >
+
+                <input
+                    type="search"
+                    id="earingsearch"
+                    placeholder="Search earings..."
+                    style="
+                        width:100%;
+                        padding:16px;
+                        border:1px solid #e6e0d5;
+                        outline:none;
+                        font-size:13px;
+                    "
+                >
+
+            </div>
+
+
+            <div class="shop-toolbar">
+
+                <div class="shop-result">
+                    15 earings
+                </div>
+
+                <div class="shop-filter">
+
+                    <label for="earingsort">
+                        Sort
+                    </label>
+
+                    <select
+                        id="earingsort"
+                        onchange="sortProducts(this.value)"
+                    >
+
+                        <option value="">
+                            Featured
+                        </option>
+
+                        <option value="low-high">
+                            Price: Low to High
+                        </option>
+
+                        <option value="high-low">
+                            Price: High to Low
+                        </option>
+
+                        <option value="name">
+                            Name
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-grid">
+
+
+                <article class="product-card" data-price="12500" data-name="Luna Pearl earings">
+
+                    <div class="product-image">
+
+                        <span class="product-badge">
+                            New
+                        </span>
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('earing-1','Luna Pearl earings',12500,'images/earing-1.jpg','earings')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('earing-1','Luna Pearl earings',12500,'images/earing-1.jpg','earings')"
+                        >
+                            <img
+                                src="images/earing-1.jpg"
+                                alt="Luna Pearl earings"
+                            >
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            earings
+                        </div>
+
+                        <h3 class="product-name">
+                            Luna Pearl earings
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 12,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="earing-1"
+                            data-product-name="Luna Pearl earings"
+                            data-product-price="12500"
+                            data-product-image="images/earing-1.jpg"
+                            data-product-category="earings"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="product-card" data-price="14500" data-name="Elara Gold Hoops">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('earing-2','Elara Gold Hoops',14500,'images/earing-2.jpg','earings')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('earing-2','Elara Gold Hoops',14500,'images/earing-2.jpg','earings')"
+                        >
+                            <img
+                                src="images/earing-2.jpg"
+                                alt="Elara Gold Hoops"
+                            >
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            earings
+                        </div>
+
+                        <h3 class="product-name">
+                            Elara Gold Hoops
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 14,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="earing-2"
+                            data-product-name="Elara Gold Hoops"
+                            data-product-price="14500"
+                            data-product-image="images/earing-2.jpg"
+                            data-product-category="earings"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="product-card" data-price="16500" data-name="Amara Crystal Drops">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('earing-3','Amara Crystal Drops',16500,'images/earing-3.jpg','earings')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('earing-3','Amara Crystal Drops',16500,'images/earing-3.jpg','earings')"
+                        >
+                            <img
+                                src="images/earing-3.jpg"
+                                alt="Amara Crystal Drops"
+                            >
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            earings
+                        </div>
+
+                        <h3 class="product-name">
+                            Amara Crystal Drops
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 16,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="earing-3"
+                            data-product-name="Amara Crystal Drops"
+                            data-product-price="16500"
+                            data-product-image="images/earing-3.jpg"
+                            data-product-category="earings"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="product-card" data-price="18500" data-name="Celeste Pearl Drops">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('earing-4','Celeste Pearl Drops',18500,'images/earing-4.jpg','earings')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('earing-4','Celeste Pearl Drops',18500,'images/earing-4.jpg','earings')"
+                        >
+                            <img
+                                src="images/earing-4.jpg"
+                                alt="Celeste Pearl Drops"
+                            >
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            earings
+                        </div>
+
+                        <h3 class="product-name">
+                            Celeste Pearl Drops
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 18,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="earing-4"
+                            data-product-name="Celeste Pearl Drops"
+                            data-product-price="18500"
+                            data-product-image="images/earing-4.jpg"
+                            data-product-category="earings"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="product-card" data-price="21500" data-name="Serena Diamond Studs">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('earing-5','Serena Diamond Studs',21500,'images/earing-5.jpg','earings')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('earing-5','Serena Diamond Studs',21500,'images/earing-5.jpg','earings')"
+                        >
+                            <img
+                                src="images/earing-5.jpg"
+                                alt="Serena Diamond Studs"
+                            >
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            earings
+                        </div>
+
+                        <h3 class="product-name">
+                            Serena Diamond Studs
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 21,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="earing-5"
+                            data-product-name="Serena Diamond Studs"
+                            data-product-price="21500"
+                            data-product-image="images/earing-5.jpg"
+                            data-product-category="earings"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="product-card" data-price="19500" data-name="Aurora Gold earings">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('earing-6','Aurora Gold earings',19500,'images/earing-6.jpg','earings')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('earing-6','Aurora Gold earings',19500,'images/earing-6.jpg','earings')"
+                        >
+                            <img
+                                src="images/earing-6.jpg"
+                                alt="Aurora Gold earings"
+                            >
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            earings
+                        </div>
+
+                        <h3 class="product-name">
+                            Aurora Gold earings
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 19,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="earing-6"
+                            data-product-name="Aurora Gold earings"
+                            data-product-price="19500"
+                            data-product-image="images/earing-6.jpg"
+                            data-product-category="earings"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="product-card" data-price="23500" data-name="Isla Pearl Hoops">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('earing-7','Isla Pearl Hoops',23500,'images/earing-7.jpg','earings')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('earing-7','Isla Pearl Hoops',23500,'images/earing-7.jpg','earings')"
+                        >
+                            <img
+                                src="images/earing-7.jpg"
+                                alt="Isla Pearl Hoops"
+                            >
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            earings
+                        </div>
+
+                        <h3 class="product-name">
+                            Isla Pearl Hoops
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 23,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="earing-7"
+                            data-product-name="Isla Pearl Hoops"
+                            data-product-price="23500"
+                            data-product-image="images/earing-7.jpg"
+                            data-product-category="earings"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="product-card" data-price="27500" data-name="Valeria Statement earings">
+
+                    <div class="product-image">
+
+                        <span class="product-badge">
+                            Bestseller
+                        </span>
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('earing-8','Valeria Statement earings',27500,'images/earing-8.jpg','earings')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('earing-8','Valeria Statement earings',27500,'images/earing-8.jpg','earings')"
+                        >
+                            <img
+                                src="images/earing-8.jpg"
+                                alt="Valeria Statement earings"
+                            >
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            earings
+                        </div>
+
+                        <h3 class="product-name">
+                            Valeria Statement earings
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 27,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="earing-8"
+                            data-product-name="Valeria Statement earings"
+                            data-product-price="27500"
+                            data-product-image="images/earing-8.jpg"
+                            data-product-category="earings"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="product-card" data-price="15500" data-name="Mira Mini Hoops">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('earing-9','Mira Mini Hoops',15500,'images/earing-9.jpg','earings')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('earing-9','Mira Mini Hoops',15500,'images/earing-9.jpg','earings')"
+                        >
+                            <img
+                                src="images/earing-9.jpg"
+                                alt="Mira Mini Hoops"
+                            >
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            earings
+                        </div>
+
+                        <h3 class="product-name">
+                            Mira Mini Hoops
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 15,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="earing-9"
+                            data-product-name="Mira Mini Hoops"
+                            data-product-price="15500"
+                            data-product-image="images/earing-9.jpg"
+                            data-product-category="earings"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="product-card" data-price="29500" data-name="Aria Crystal Chandelier earings">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('earing-10','Aria Crystal Chandelier earings',29500,'images/earing-10.jpg','earings')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('earing-10','Aria Crystal Chandelier earings',29500,'images/earing-10.jpg','earings')"
+                        >
+                            <img
+                                src="images/earing-10.jpg"
+                                alt="Aria Crystal Chandelier earings"
+                            >
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            earings
+                        </div>
+
+                        <h3 class="product-name">
+                            Aria Crystal Chandelier earings
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 29,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="earing-10"
+                            data-product-name="Aria Crystal Chandelier earings"
+                            data-product-price="29500"
+                            data-product-image="images/earing-10.jpg"
+                            data-product-category="earings"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="product-card" data-price="18500" data-name="Nora Rose Gold Studs">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('earing-11','Nora Rose Gold Studs',18500,'images/earing-11.jpg','earings')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('earing-11','Nora Rose Gold Studs',18500,'images/earing-11.jpg','earings')"
+                        >
+                            <img
+                                src="images/earing-11.jpg"
+                                alt="Nora Rose Gold Studs"
+                            >
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            earings
+                        </div>
+
+                        <h3 class="product-name">
+                            Nora Rose Gold Studs
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 18,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="earing-11"
+                            data-product-name="Nora Rose Gold Studs"
+                            data-product-price="18500"
+                            data-product-image="images/earing-11.jpg"
+                            data-product-category="earings"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <article class="product-card" data-price="32500" data-name="Sapphire Grace earings">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('earing-12','Sapphire Grace earings',32500,'images/earing-12.jpg','earings')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('earing-12','Sapphire Grace earings',32500,'images/earing-12.jpg','earings')"
+                        >
+                            <img
+                                src="images/earing-12.jpg"
+                                alt="Sapphire Grace earings"
+                            >
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            earings
+                        </div>
+
+                        <h3 class="product-name">
+                            Sapphire Grace earings
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 32,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="earing-12"
+                            data-product-name="Sapphire Grace earings"
+                            data-product-price="32500"
+                            data-product-image="images/earing-12.jpg"
+                            data-product-category="earings"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="product-card" data-price="2500" data-name="Clara Pearl Studs">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('earing-13','Clara Pearl Studs',2500,'images/earing-13.jpg','earings')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('earing-13','Clara Pearl Studs',2500,'images/earing-13.jpg','earings')"
+                        >
+                            <img
+                                src="images/earing-13.jpg"
+                                alt="Clara Pearl Studs"
+                            >
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            earings
+                        </div>
+
+                        <h3 class="product-name">
+                            Clara Pearl Studs
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 20,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="earing-13"
+                            data-product-name="Clara Pearl Studs"
+                            data-product-price="2500"
+                            data-product-image="images/earing-13.jpg"
+                            data-product-category="earings"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="product-card" data-price="26500" data-name="Evelyn Diamond Hoops">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('earing-14','Evelyn Diamond Hoops',26500,'images/earing-14.jpg','earings')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('earing-14','Evelyn Diamond Hoops',26500,'images/earing-14.jpg','earings')"
+                        >
+                            <img
+                                src="images/earing-14.jpg"
+                                alt="Evelyn Diamond Hoops"
+                            >
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            earings
+                        </div>
+
+                        <h3 class="product-name">
+                            Evelyn Diamond Hoops
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 26,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="earing-14"
+                            data-product-name="Evelyn Diamond Hoops"
+                            data-product-price="26500"
+                            data-product-image="images/earing-14.jpg"
+                            data-product-category="earings"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <article class="product-card" data-price="36500" data-name="Seraphine Luxury earings">
+
+                    <div class="product-image">
+
+                        <span class="product-badge">
+                            Exclusive
+                        </span>
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('earing-15','Seraphine Luxury earings',36500,'images/earing-15.jpg','earings')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('earing-15','Seraphine Luxury earings',36500,'images/earing-15.jpg','earings')"
+                        >
+                            <img
+                                src="images/earings.jpg"
+                                alt="Seraphine Luxury earings"
+                            >
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            earings
+                        </div>
+
+                        <h3 class="product-name">
+                            Seraphine Luxury earings
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 36,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="earing-15"
+                            data-product-name="Seraphine Luxury earings"
+                            data-product-price="36500"
+                            data-product-image="images/earing-15.jpg"
+                            data-product-category="earings"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <section class="newsletter">
+
+            <h2>
+                Join The World Of Zavella
+            </h2>
+
+            <p>
+                Be the first to discover new collections.
+            </p>
+
+            <form class="newsletter-form">
+
+                <input
+                    type="email"
+                    placeholder="Your email address"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    ZAVELLA<span>.</span>
+                </a>
+
+                <p>
+                    Timeless jewellery for modern women.
+                    Discover refined pieces designed to
+                    become part of your story.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Shop
+                </h4>
+
+                <a href="shop.html">
+                    All Jewellery
+                </a>
+
+                <a href="rings.html">
+                    Rings
+                </a>
+
+                <a href="earings.html">
+                    earings
+                </a>
+
+                <a href="bracelets.html">
+                    Bracelets
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Information
+                </h4>
+
+                <a href="about.html">
+                    Our Story
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="#">
+                    Shipping & Returns
+                </a>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Follow
+                </h4>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="#">
+                    Pinterest
+                </a>
+
+                <a
+                    href="https://wa.me/923237958455"
+                    target="_blank"
+                >
+                    WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 226 ZAVELLA. All Rights Reserved.
+            </span>
+
+            <span>
+                Luxury Jewellery
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <a
+        href="https://wa.me/923237958455"
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="WhatsApp Zavella"
+    >
+        ☎
+    </a>
+
+
+    <div class="toast"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```

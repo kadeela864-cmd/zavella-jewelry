@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>About Us | ZAVELLA Luxury Jewellery</title>
+
+<meta name="description"
+      content="Discover the story behind ZAVELLA — timeless luxury jewellery created for modern women.">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+    /* ================================
+       ABOUT HERO
+    ================================= */
+
+    .about-hero {
+        position: relative;
+        min-height: 620px;
+        height: 75vh;
+        overflow: hidden;
+        background: #f3eee7;
+    }
+
+    .about-hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .about-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            90deg,
+            rgba(0,0,0,0.62),
+            rgba(0,0,0,0.22),
+            rgba(0,0,0,0.40)
+        );
+    }
+
+    .about-hero-content {
+        position: absolute;
+        left: 8%;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 650px;
+        color: white;
+    }
+
+    .about-hero-content .eyebrow {
+        font-size: 12px;
+        letter-spacing: 4px;
+        margin-bottom: 18px;
+    }
+
+    .about-hero-content h1 {
+        font-size: clamp(50px, 7vw, 90px);
+        line-height: 1;
+        font-weight: 400;
+        margin: 0 0 25px;
+    }
+
+    .about-hero-content p {
+        font-size: 17px;
+        line-height: 1.8;
+        max-width: 520px;
+    }
+
+
+    /* ================================
+       STORY SECTION
+    ================================= */
+
+    .about-story {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+        align-items: center;
+        padding: 110px 8%;
+        background: #fff;
+    }
+
+    .about-story-image {
+        height: 600px;
+        overflow: hidden;
+    }
+
+    .about-story-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform .7s ease;
+    }
+
+    .about-story-image:hover img {
+        transform: scale(1.04);
+    }
+
+    .about-story-content .eyebrow {
+        color: #9a6a24;
+        font-size: 12px;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+    }
+
+    .about-story-content h2 {
+        color: #111;
+        font-size: clamp(38px, 5vw, 62px);
+        line-height: 1.08;
+        font-weight: 400;
+        margin: 0 0 25px;
+    }
+
+    .about-story-content p {
+        color: #222;
+        line-height: 1.9;
+        margin-bottom: 18px;
+        font-size: 16px;
+    }
+
+
+    /* ================================
+       GOLD DIVIDER
+    ================================= */
+
+    .gold-line {
+        width: 70px;
+        height: 2px;
+        background: #c9963e;
+        margin: 28px 0;
+    }
+
+
+    /* ================================
+       VALUES
+    ================================= */
+
+    .about-values {
+        padding: 105px 7%;
+        background: #f7efe3;
+        text-align: center;
+    }
+
+    .about-values .eyebrow {
+        color: #9a6a24;
+        font-size: 12px;
+        letter-spacing: 3px;
+        margin-bottom: 14px;
+    }
+
+    .about-values h2 {
+        color: #111;
+        font-size: clamp(38px, 5vw, 58px);
+        font-weight: 400;
+        margin: 0 auto 55px;
+    }
+
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .value-card {
+        background: white;
+        padding: 45px 30px;
+        border: 1px solid #eadbc5;
+        transition: .3s ease;
+    }
+
+    .value-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 15px 35px rgba(0,0,0,.08);
+    }
+
+    .value-icon {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .value-card h3 {
+        color: #111;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    .value-card p {
+        color: #333;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+
+    /* ================================
+       QUOTE
+    ================================= */
+
+    .about-quote {
+        padding: 120px 8%;
+        background: #171717;
+        text-align: center;
+        color: white;
+    }
+
+    .about-quote h2 {
+        max-width: 950px;
+        margin: auto;
+        font-size: clamp(34px, 5vw, 62px);
+        line-height: 1.2;
+        font-weight: 400;
+    }
+
+    .about-quote p {
+        margin-top: 25px;
+        color: #e7e7e7;
+        letter-spacing: 2px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+
+    /* ================================
+       CTA
+    ================================= */
+
+    .about-cta {
+        padding: 100px 7%;
+        text-align: center;
+        background: #fff;
+    }
+
+    .about-cta h2 {
+        color: #111;
+        font-size: clamp(35px, 5vw, 58px);
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    .about-cta p {
+        color: #333;
+        max-width: 650px;
+        margin: 0 auto 30px;
+        line-height: 1.8;
+    }
+
+    .about-cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .about-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 30px;
+        min-width: 170px;
+        text-decoration: none;
+        border: 1px solid #111;
+        color: #111;
+        transition: .3s ease;
+    }
+
+    .about-btn.primary {
+        background: #111;
+        color: white;
+    }
+
+    .about-btn:hover {
+        background: #c9963e;
+        border-color: #c9963e;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+
+    /* ================================
+       MOBILE
+    ================================= */
+
+    @media (max-width: 850px) {
+
+        .about-hero {
+            min-height: 540px;
+        }
+
+        .about-hero-content {
+            left: 7%;
+            right: 7%;
+        }
+
+        .about-story {
+            grid-template-columns: 1fr;
+            padding: 75px 6%;
+            gap: 45px;
+        }
+
+        .about-story-image {
+            height: 480px;
+        }
+
+        .values-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+        .about-hero {
+            height: 70vh;
+            min-height: 500px;
+        }
+
+        .about-hero-content h1 {
+            font-size: 48px;
+        }
+
+        .about-hero-content p {
+            font-size: 15px;
+        }
+
+        .about-story-image {
+            height: 420px;
+        }
+
+        .about-values {
+            padding: 75px 5%;
+        }
+
+        .about-quote {
+            padding: 85px 6%;
+        }
+
+        .about-cta {
+            padding: 75px 6%;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- TOP BAR -->
+
+<div class="top-bar">
+    Complimentary delivery on orders over Rs. 15,000
+</div>
+
+
+<!-- HEADER -->
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+        <button
+            class="mobile-menu-btn"
+            type="button"
+            aria-label="Open menu">
+            ☰
+        </button>
+
+        <a href="index.html" class="logo">
+            ZAVELLA<span>.</span>
+        </a>
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="collections.html">
+                Collections
+            </a>
+
+            <a href="rings.html">
+                Rings
+            </a>
+
+            <a href="earings.html">
+                Earrings
+            </a>
+
+            <a href="bracelets.html">
+                Bracelets
+            </a>
+
+            <a href="about.html" class="active">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <a
+                href="cart.html"
+                class="header-action cart-link"
+                aria-label="Shopping bag">
+
+                ♡
+
+                <span class="cart-count">
+                    0
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================================
+     ABOUT HERO
+================================= -->
+
+<section class="about-hero">
+
+    <img
+        src="images/hero.jpg"
+        alt="ZAVELLA luxury jewellery">
+
+    <div class="about-hero-overlay"></div>
+
+    <div class="about-hero-content">
+
+        <div class="eyebrow">
+            THE ZAVELLA STORY
+        </div>
+
+        <h1>
+            Jewellery<br>
+            With Meaning.
+        </h1>
+
+        <p>
+            Created for women who believe that
+            the smallest details can make the
+            biggest impression.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     OUR STORY
+================================= -->
+
+<section class="about-story">
+
+    <div class="about-story-image">
+
+        <img
+            src="images/earings.jpg"
+            alt="ZAVELLA jewellery collection"
+            loading="lazy">
+
+    </div>
+
+
+    <div class="about-story-content">
+
+        <div class="eyebrow">
+            OUR BEGINNING
+        </div>
+
+        <h2>
+            Designed To Become Part Of Your Story.
+        </h2>
+
+        <div class="gold-line"></div>
+
+        <p>
+            ZAVELLA was created with one simple
+            belief: jewellery should be more than
+            something beautiful you wear.
+        </p>
+
+        <p>
+            It should represent confidence,
+            celebrate milestones and become part
+            of the memories you never want to forget.
+        </p>
+
+        <p>
+            Our collections bring together elegant
+            silhouettes, refined details and timeless
+            designs created for the modern woman.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     VALUES
+================================= -->
+
+<section class="about-values">
+
+    <div class="eyebrow">
+        WHAT WE BELIEVE
+    </div>
+
+    <h2>
+        The ZAVELLA Standard
+    </h2>
+
+    <div class="values-grid">
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                ✦
+            </div>
+
+            <h3>
+                Timeless Design
+            </h3>
+
+            <p>
+                We choose elegant designs that
+                remain beautiful beyond changing
+                trends and seasons.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                ♢
+            </div>
+
+            <h3>
+                Refined Details
+            </h3>
+
+            <p>
+                Every detail matters. From delicate
+                shapes to sophisticated finishes,
+                our pieces are selected with care.
+            </p>
+
+        </div>
+
+
+        <div class="value-card">
+
+            <div class="value-icon">
+                ✧
+            </div>
+
+            <h3>
+                Made For You
+            </h3>
+
+            <p>
+                Jewellery should reflect your
+                personality, your confidence and
+                your individual story.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     QUOTE
+================================= -->
+
+<section class="about-quote">
+
+    <h2>
+        “The most beautiful jewellery
+        is the piece that becomes
+        uniquely yours.”
+    </h2>
+
+    <p>
+        The ZAVELLA Philosophy
+    </p>
+
+</section>
+
+
+<!-- ================================
+     CTA
+================================= -->
+
+<section class="about-cta">
+
+    <h2>
+        Find Something Beautiful.
+    </h2>
+
+    <p>
+        Explore the ZAVELLA collection and
+        discover jewellery designed to become
+        part of your everyday moments.
+    </p>
+
+    <div class="about-cta-buttons">
+
+        <a
+            href="shop.html"
+            class="about-btn primary">
+            Shop Collection
+        </a>
+
+        <a
+            href="https://wa.me/923237958455"
+            target="_blank"
+            class="about-btn">
+            WhatsApp Us
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     FOOTER
+================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-grid">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo">
+                ZAVELLA<span>.</span>
+            </a>
+
+            <p>
+                Timeless jewellery for modern women.
+                Discover refined pieces designed
+                to become part of your story.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Shop
+            </h4>
+
+            <a href="shop.html">
+                All Jewellery
+            </a>
+
+            <a href="rings.html">
+                Rings
+            </a>
+
+            <a href="earings.html">
+                Earrings
+            </a>
+
+            <a href="bracelets.html">
+                Bracelets
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Information
+            </h4>
+
+            <a href="about.html">
+                Our Story
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="#">
+                Shipping & Returns
+            </a>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Connect
+            </h4>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                Facebook
+            </a>
+
+            <a href="#">
+                Pinterest
+            </a>
+
+            <a
+                href="https://wa.me/923237958455"
+                target="_blank">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 ZAVELLA. All Rights Reserved.
+        </span>
+
+        <span>
+            Luxury Jewellery
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+    href="https://wa.me/923237958455"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="WhatsApp ZAVELLA">
+    ☎
+</a>
+
+
+<div class="toast"></div>
+
+
+<script src="script.js"></script>
+```
+
+</body>
+</html>

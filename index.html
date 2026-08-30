@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZAVELLA | Luxury Jewellery</title>
+
+    <meta
+        name="description"
+        content="ZAVELLA — timeless luxury jewellery designed for modern women."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           ZAVELLA HOMEPAGE
+           MODEL SLIDESHOW
+        ===================================================== */
+
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            height: 82vh;
+            min-height: 600px;
+            overflow: hidden;
+            background: #eee9e2;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition:
+                opacity 0.8s ease,
+                visibility 0.8s ease;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,0.48) 0%,
+                    rgba(0,0,0,0.20) 45%,
+                    rgba(0,0,0,0.5) 100%
+                );
+        }
+
+        .hero-content {
+            position: absolute;
+            left: 8%;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 570px;
+            color: #fff;
+            z-index: 5;
+        }
+
+        .hero-eyebrow {
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(48px, 7vw, 92px);
+            line-height: 0.98;
+            font-weight: 400;
+            margin: 0 0 25px;
+            letter-spacing: -2px;
+        }
+
+        .hero-content p {
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 470px;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 170px;
+            padding: 15px 26px;
+            text-decoration: none;
+            border: 1px solid #fff;
+            color: #fff;
+            transition: 0.3s ease;
+        }
+
+        .hero-btn.primary {
+            background: #fff;
+            color: #222;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+
+        /* =====================================================
+           SLIDER ARROWS
+        ===================================================== */
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border: 1px solid rgba(255,255,255,0.7);
+            background: rgba(0,0,0,0.12);
+            color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 25px;
+            transition: 0.3s ease;
+        }
+
+        .slider-arrow:hover {
+            background: #fff;
+            color: #222;
+        }
+
+        .slider-prev {
+            left: 28px;
+        }
+
+        .slider-next {
+            right: 28px;
+        }
+
+
+        /* =====================================================
+           SLIDER DOTS
+        ===================================================== */
+
+        .slider-dots {
+            position: absolute;
+            left: 50%;
+            bottom: 28px;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 9px;
+            z-index: 10;
+        }
+
+        .slider-dot {
+            width: 9px;
+            height: 9px;
+            padding: 0;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            background: transparent;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .slider-dot.active {
+            background: #fff;
+        }
+
+
+        /* =====================================================
+           SLIDE NUMBER
+        ===================================================== */
+
+        .slide-number {
+            position: absolute;
+            right: 7%;
+            bottom: 28px;
+            color: #fff;
+            font-size: 12px;
+            letter-spacing: 3px;
+            z-index: 10;
+        }
+
+
+        /* =====================================================
+           FEATURED CATEGORIES
+        ===================================================== */
+
+        .home-categories {
+            padding: 100px 6%;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 55px;
+        }
+
+        .section-heading .eyebrow {
+            margin-bottom: 14px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(34px, 5vw, 58px);
+            font-weight: 400;
+            margin: 0 0 18px;
+        }
+
+        .section-heading p {
+            line-height: 1.8;
+            opacity: 0.75;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .category-card {
+            position: relative;
+            height: 520px;
+            overflow: hidden;
+            text-decoration: none;
+            display: block;
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .category-card-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 40px 20px;
+            background:
+                linear-gradient(
+                    transparent 45%,
+                    rgba(0,0,0,0.65)
+                );
+        }
+
+        .category-card-content {
+            text-align: center;
+            color: #fff;
+        }
+
+        .category-card-content h3 {
+            font-size: 31px;
+            font-weight: 400;
+            margin: 0 0 10px;
+        }
+
+        .category-card-content span {
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           BRAND STATEMENT
+        ===================================================== */
+
+        .brand-statement {
+            padding: 110px 7%;
+            text-align: center;
+            background: #f4f0ea;
+        }
+
+        .brand-statement h2 {
+            max-width: 850px;
+            margin: 0 auto 25px;
+            font-size: clamp(35px, 5vw, 62px);
+            font-weight: 400;
+            line-height: 1.15;
+        }
+
+        .brand-statement p {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.9;
+            opacity: 0.75;
+        }
+
+        .brand-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+            padding-bottom: 6px;
+            letter-spacing: 1px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1100px) {
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 900px) {
+
+            .hero-slider {
+                height: 75vh;
+                min-height: 550px;
+            }
+
+            .hero-content {
+                left: 7%;
+                right: 7%;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .category-card {
+                height: 470px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero-slider {
+                height: 78vh;
+                min-height: 520px;
+            }
+
+            .hero-content {
+                top: auto;
+                bottom: 85px;
+                transform: none;
+            }
+
+            .hero-content h1 {
+                font-size: 48px;
+            }
+
+            .hero-content p {
+                font-size: 15px;
+            }
+
+            .slider-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .slider-prev {
+                left: 14px;
+            }
+
+            .slider-next {
+                right: 14px;
+            }
+
+            .slide-number {
+                display: none;
+            }
+
+            .home-categories {
+                padding: 70px 5%;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-card {
+                height: 420px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <div class="top-bar">
+        Complimentary delivery on orders over Rs. 15,000
+    </div>
+
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+
+            <button
+                class="mobile-menu-btn"
+                type="button"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                ZAVELLA<span>.</span>
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a
+                    href="index.html"
+                    class="active"
+                >
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="rings.html">
+                    Rings
+                </a>
+
+                <a href="earings.html">
+                    Earrings
+                </a>
+
+                <a href="bracelets.html">
+                    Bracelets
+                </a>
+
+                <!-- NECKLACES ADDED -->
+
+                <a href="necklace.html">
+                    Necklaces
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <a
+                    href="cart.html"
+                    class="header-action cart-link"
+                    aria-label="Shopping bag"
+                >
+                    ♡
+
+                    <span class="cart-count">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+
+    <!-- =====================================================
+         HERO MODEL SLIDESHOW
+    ====================================================== -->
+
+    <section
+        class="hero-slider"
+        id="heroSlider"
+    >
+
+
+        <!-- MODEL 1 -->
+
+        <div
+            class="hero-slide active"
+            data-slide="1"
+        >
+
+            <img
+                src="images/model-1.jpg"
+                alt="ZAVELLA luxury jewellery model"
+            >
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-eyebrow">
+                    ZAVELLA — THE NEW COLLECTION
+                </div>
+
+                <h1>
+                    Made to<br>
+                    Be Remembered.
+                </h1>
+
+                <p>
+                    Discover refined jewellery created
+                    for the moments that deserve to shine.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="shop.html"
+                        class="hero-btn primary"
+                    >
+                        Explore Collection
+                    </a>
+
+                    <a
+                        href="about.html"
+                        class="hero-btn"
+                    >
+                        Our Story
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MODEL 2 -->
+
+        <div
+            class="hero-slide"
+            data-slide="2"
+        >
+
+            <img
+                src="images/model-2.jpg"
+                alt="ZAVELLA jewellery fashion model"
+            >
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-eyebrow">
+                    TIMELESS ELEGANCE
+                </div>
+
+                <h1>
+                    Elegance<br>
+                    In Every Detail.
+                </h1>
+
+                <p>
+                    Beautifully crafted pieces designed
+                    to elevate your everyday style.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="rings.html"
+                        class="hero-btn primary"
+                    >
+                        Discover Rings
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MODEL 3 -->
+
+        <div
+            class="hero-slide"
+            data-slide="3"
+        >
+
+            <img
+                src="images/model-3.jpg"
+                alt="ZAVELLA jewellery model"
+            >
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-eyebrow">
+                    SIGNATURE PIECES
+                </div>
+
+                <h1>
+                    Your Style.<br>
+                    Your Story.
+                </h1>
+
+                <p>
+                    Jewellery that becomes part of
+                    your most beautiful memories.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="earings.html"
+                        class="hero-btn primary"
+                    >
+                        Shop Earrings
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MODEL 4 -->
+
+        <div
+            class="hero-slide"
+            data-slide="4"
+        >
+
+            <img
+                src="images/model-4.jpg"
+                alt="ZAVELLA luxury jewellery campaign"
+            >
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-eyebrow">
+                    THE ART OF JEWELLERY
+                </div>
+
+                <h1>
+                    Quiet Luxury.<br>
+                    Lasting Beauty.
+                </h1>
+
+                <p>
+                    Discover sophisticated designs
+                    made to be treasured.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="bracelets.html"
+                        class="hero-btn primary"
+                    >
+                        Shop Bracelets
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MODEL 5 -->
+
+        <div
+            class="hero-slide"
+            data-slide="5"
+        >
+
+            <img
+                src="images/model-5.jpg"
+                alt="ZAVELLA luxury jewellery model"
+            >
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-eyebrow">
+                    ZAVELLA ESSENTIALS
+                </div>
+
+                <h1>
+                    Effortless.<br>
+                    Extraordinary.
+                </h1>
+
+                <p>
+                    Timeless jewellery for every version
+                    of you.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="shop.html"
+                        class="hero-btn primary"
+                    >
+                        Shop Now
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MODEL 6 -->
+
+        <div
+            class="hero-slide"
+            data-slide="6"
+        >
+
+            <img
+                src="images/model-6.jpg"
+                alt="ZAVELLA jewellery editorial model"
+            >
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-eyebrow">
+                    MODERN LUXURY
+                </div>
+
+                <h1>
+                    Shine Your<br>
+                    Own Way.
+                </h1>
+
+                <p>
+                    A collection inspired by confidence,
+                    beauty and individuality.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="shop.html"
+                        class="hero-btn primary"
+                    >
+                        View Collection
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MODEL 7 -->
+
+        <div
+            class="hero-slide"
+            data-slide="7"
+        >
+
+            <img
+                src="images/model-7.jpg"
+                alt="ZAVELLA premium jewellery model"
+            >
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-eyebrow">
+                    THE ZAVELLA WOMAN
+                </div>
+
+                <h1>
+                    Beautifully<br>
+                    Unapologetic.
+                </h1>
+
+                <p>
+                    Jewellery designed to make
+                    every entrance unforgettable.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="shop.html"
+                        class="hero-btn primary"
+                    >
+                        Shop Jewellery
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MODEL 8 -->
+
+        <div
+            class="hero-slide"
+            data-slide="8"
+        >
+
+            <img
+                src="images/model-8.jpg"
+                alt="ZAVELLA luxury jewellery collection"
+            >
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-eyebrow">
+                    ZAVELLA
+                </div>
+
+                <h1>
+                    Jewellery<br>
+                    With A Soul.
+                </h1>
+
+                <p>
+                    Discover pieces made to stay
+                    beautiful, season after season.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="shop.html"
+                        class="hero-btn primary"
+                    >
+                        Explore ZAVELLA
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SLIDER ARROWS -->
+
+        <button
+            type="button"
+            class="slider-arrow slider-prev"
+            id="sliderPrev"
+            aria-label="Previous model"
+        >
+            ‹
+        </button>
+
+
+        <button
+            type="button"
+            class="slider-arrow slider-next"
+            id="sliderNext"
+            aria-label="Next model"
+        >
+            ›
+        </button>
+
+
+
+        <!-- SLIDER DOTS -->
+
+        <div
+            class="slider-dots"
+            id="sliderDots"
+        >
+
+            <button
+                class="slider-dot active"
+                data-slide="1"
+                aria-label="Go to model 1"
+            ></button>
+
+            <button
+                class="slider-dot"
+                data-slide="2"
+                aria-label="Go to model 2"
+            ></button>
+
+            <button
+                class="slider-dot"
+                data-slide="3"
+                aria-label="Go to model 3"
+            ></button>
+
+            <button
+                class="slider-dot"
+                data-slide="4"
+                aria-label="Go to model 4"
+            ></button>
+
+            <button
+                class="slider-dot"
+                data-slide="5"
+                aria-label="Go to model 5"
+            ></button>
+
+            <button
+                class="slider-dot"
+                data-slide="6"
+                aria-label="Go to model 6"
+            ></button>
+
+            <button
+                class="slider-dot"
+                data-slide="7"
+                aria-label="Go to model 7"
+            ></button>
+
+            <button
+                class="slider-dot"
+                data-slide="8"
+                aria-label="Go to model 8"
+            ></button>
+
+        </div>
+
+
+
+        <div
+            class="slide-number"
+            id="slideNumber"
+        >
+            01 / 08
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- =====================================================
+         SHOP BY CATEGORY
+    ====================================================== -->
+
+    <section class="home-categories">
+
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                EXPLORE ZAVELLA
+            </div>
+
+            <h2>
+                Find Your Signature
+            </h2>
+
+            <p>
+                Discover carefully selected jewellery
+                designed to complement every style.
+            </p>
+
+        </div>
+
+
+
+        <div class="category-grid">
+
+
+            <!-- RINGS -->
+
+            <a
+                href="rings.html"
+                class="category-card"
+            >
+
+                <img
+                    src="images/ring.jpg"
+                    alt="ZAVELLA Rings"
+                    loading="lazy"
+                >
+
+                <div class="category-card-overlay">
+
+                    <div class="category-card-content">
+
+                        <h3>
+                            Rings
+                        </h3>
+
+                        <span>
+                            Explore Collection →
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- EARRINGS -->
+
+            <a
+                href="earings.html"
+                class="category-card"
+            >
+
+                <img
+                    src="images/earings.jpg"
+                    alt="ZAVELLA Earrings"
+                    loading="lazy"
+                >
+
+                <div class="category-card-overlay">
+
+                    <div class="category-card-content">
+
+                        <h3>
+                            Earrings
+                        </h3>
+
+                        <span>
+                            Explore Collection →
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- BRACELETS -->
+
+            <a
+                href="bracelet.html"
+                class="category-card"
+            >
+
+                <img
+                    src="images/bracelet.jpg"
+                    alt="ZAVELLA Bracelets"
+                    loading="lazy"
+                >
+
+                <div class="category-card-overlay">
+
+                    <div class="category-card-content">
+
+                        <h3>
+                            Bracelets
+                        </h3>
+
+                        <span>
+                            Explore Collection →
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- NECKLACES -->
+
+            <a
+                href="necklace.html"
+                class="category-card"
+            >
+
+                <img
+                    src="images/necklace.jpg"
+                    alt="ZAVELLA Necklaces"
+                    loading="lazy"
+                >
+
+                <div class="category-card-overlay">
+
+                    <div class="category-card-content">
+
+                        <h3>
+                            Necklaces
+                        </h3>
+
+                        <span>
+                            Explore Collection →
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- =====================================================
+         BRAND STATEMENT
+    ====================================================== -->
+
+    <section class="brand-statement">
+
+        <div
+            class="eyebrow"
+            style="color: black;"
+        >
+            THE ZAVELLA STORY
+        </div>
+
+        <h2 style="color: black;">
+
+            Jewellery should feel as beautiful
+            as the moment you wear it.
+
+        </h2>
+
+        <p style="color: black;">
+
+            At ZAVELLA, we believe true luxury lives
+            in the details. Every piece is selected
+            to bring elegance, confidence and a little
+            more sparkle to everyday life.
+
+        </p>
+
+        <a
+            style="color: black;"
+            href="about.html"
+            class="brand-link"
+        >
+            Discover Our Story →
+        </a>
+
+    </section>
+
+
+
+
+    <!-- =====================================================
+         NEWSLETTER
+    ====================================================== -->
+
+    <section class="newsletter">
+
+        <h2>
+            Join The World Of Zavella
+        </h2>
+
+        <p>
+            Be the first to discover new collections,
+            exclusive pieces and special offers.
+        </p>
+
+
+        <form
+            class="newsletter-form"
+            onsubmit="subscribeNewsletter(event)"
+        >
+
+            <input
+                type="email"
+                placeholder="Your email address"
+                required
+            >
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </section>
+
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-grid">
+
+
+            <!-- FOOTER BRAND -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+                    ZAVELLA<span>.</span>
+                </a>
+
+                <p>
+                    Timeless jewellery for modern women.
+                    Discover refined pieces designed
+                    to become part of your story.
+                </p>
+
+            </div>
+
+
+
+            <!-- SHOP -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Shop
+                </h4>
+
+                <a href="shop.html">
+                    All Jewellery
+                </a>
+
+                <a href="rings.html">
+                    Rings
+                </a>
+
+                <a href="earings.html">
+                    Earrings
+                </a>
+
+                <a href="bracelets.html">
+                    Bracelets
+                </a>
+
+                <!-- NECKLACES ADDED -->
+
+                <a href="necklace.html">
+                    Necklaces
+                </a>
+
+            </div>
+
+
+
+            <!-- INFORMATION -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Information
+                </h4>
+
+                <a href="about.html">
+                    Our Story
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="#">
+                    Shipping & Returns
+                </a>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+
+
+            <!-- CONNECT -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Connect
+                </h4>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="#">
+                    Pinterest
+                </a>
+
+                <a
+                    href="https://wa.me/923237958455"
+                    target="_blank"
+                >
+                    WhatsApp
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 ZAVELLA. All Rights Reserved.
+            </span>
+
+            <span>
+                Luxury Jewellery
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+
+    <!-- =====================================================
+         WHATSAPP
+    ====================================================== -->
+
+    <a
+        href="https://wa.me/923237958455"
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="WhatsApp ZAVELLA"
+    >
+        ☎
+    </a>
+
+
+
+    <div class="toast"></div>
+
+
+
+    <!-- MAIN JS -->
+
+    <script src="script.js"></script>
+
+
+
+
+    <!-- =====================================================
+         HOMEPAGE SLIDESHOW JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const slides =
+                    document.querySelectorAll(
+                        ".hero-slide"
+                    );
+
+                const dots =
+                    document.querySelectorAll(
+                        ".slider-dot"
+                    );
+
+                const previousButton =
+                    document.getElementById(
+                        "sliderPrev"
+                    );
+
+                const nextButton =
+                    document.getElementById(
+                        "sliderNext"
+                    );
+
+                const slideNumber =
+                    document.getElementById(
+                        "slideNumber"
+                    );
+
+                let currentSlide = 0;
+
+                let autoSlide;
+
+
+                function showSlide(index) {
+
+                    if (index < 0) {
+                        index =
+                            slides.length - 1;
+                    }
+
+                    if (index >= slides.length) {
+                        index = 0;
+                    }
+
+
+                    slides.forEach(
+                        slide =>
+                            slide.classList.remove(
+                                "active"
+                            )
+                    );
+
+
+                    dots.forEach(
+                        dot =>
+                            dot.classList.remove(
+                                "active"
+                            )
+                    );
+
+
+                    slides[index]
+                        .classList.add(
+                            "active"
+                        );
+
+
+                    if (dots[index]) {
+
+                        dots[index]
+                            .classList.add(
+                                "active"
+                            );
+
+                    }
+
+
+                    currentSlide = index;
+
+
+                    slideNumber.textContent =
+                        String(
+                            index + 1
+                        ).padStart(2, "0") +
+                        " / " +
+                        String(
+                            slides.length
+                        ).padStart(2, "0");
+
+                }
+
+
+                function nextSlide() {
+
+                    showSlide(
+                        currentSlide + 1
+                    );
+
+                }
+
+
+                function previousSlide() {
+
+                    showSlide(
+                        currentSlide - 1
+                    );
+
+                }
+
+
+                function startAutoSlide() {
+
+                    clearInterval(
+                        autoSlide
+                    );
+
+                    autoSlide =
+                        setInterval(
+                            nextSlide,
+                            5000
+                        );
+
+                }
+
+
+                function restartAutoSlide() {
+
+                    startAutoSlide();
+
+                }
+
+
+                nextButton.addEventListener(
+                    "click",
+                    function () {
+
+                        nextSlide();
+
+                        restartAutoSlide();
+
+                    }
+                );
+
+
+                previousButton.addEventListener(
+                    "click",
+                    function () {
+
+                        previousSlide();
+
+                        restartAutoSlide();
+
+                    }
+                );
+
+
+                dots.forEach(
+                    function (dot, index) {
+
+                        dot.addEventListener(
+                            "click",
+                            function () {
+
+                                showSlide(index);
+
+                                restartAutoSlide();
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /* PAUSE ON MOUSE */
+
+                const hero =
+                    document.getElementById(
+                        "heroSlider"
+                    );
+
+
+                hero.addEventListener(
+                    "mouseenter",
+                    function () {
+
+                        clearInterval(
+                            autoSlide
+                        );
+
+                    }
+                );
+
+
+                hero.addEventListener(
+                    "mouseleave",
+                    function () {
+
+                        startAutoSlide();
+
+                    }
+                );
+
+
+                /* TOUCH SWIPE */
+
+                let touchStartX = 0;
+
+                let touchEndX = 0;
+
+
+                hero.addEventListener(
+                    "touchstart",
+                    function (event) {
+
+                        touchStartX =
+                            event.changedTouches[0]
+                                .screenX;
+
+                    },
+                    {
+                        passive: true
+                    }
+                );
+
+
+                hero.addEventListener(
+                    "touchend",
+                    function (event) {
+
+                        touchEndX =
+                            event.changedTouches[0]
+                                .screenX;
+
+
+                        const distance =
+                            touchEndX -
+                            touchStartX;
+
+
+                        if (
+                            Math.abs(distance) < 50
+                        ) {
+
+                            return;
+
+                        }
+
+
+                        if (distance < 0) {
+
+                            nextSlide();
+
+                        } else {
+
+                            previousSlide();
+
+                        }
+
+
+                        restartAutoSlide();
+
+                    },
+                    {
+                        passive: true
+                    }
+                );
+
+
+                showSlide(0);
+
+                startAutoSlide();
+
+            }
+        );
+
+
+        /* =====================================================
+           NEWSLETTER
+        ====================================================== */
+
+        function subscribeNewsletter(event) {
+
+            event.preventDefault();
+
+            const email =
+                event.target.querySelector(
+                    "input"
+                ).value;
+
+            alert(
+                "Thank you for subscribing to ZAVELLA!"
+            );
+
+            event.target.reset();
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

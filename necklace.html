@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Necklaces | ZAVELLA</title>
+
+    <meta
+        name="description"
+        content="Explore the ZAVELLA necklace collection. Discover elegant and timeless necklaces designed for every occasion."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           ZAVELLA NECKLACES PAGE
+        ===================================================== */
+
+        .necklace-page {
+            background: #faf8f5;
+            min-height: 100vh;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .necklace-hero {
+            min-height: 500px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 100px 6%;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.35),
+                    rgba(0,0,0,0.35)
+                ),
+                url("images/necklace.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            color: #fff;
+        }
+
+
+        .necklace-hero-content {
+            max-width: 760px;
+        }
+
+
+        .necklace-eyebrow {
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+
+        .necklace-hero h1 {
+            font-size: clamp(48px, 7vw, 86px);
+            line-height: 1;
+            font-weight: 400;
+            margin: 0 0 25px;
+        }
+
+
+        .necklace-hero p {
+            max-width: 620px;
+            margin: 0 auto;
+
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .necklace-intro {
+            text-align: center;
+            padding: 85px 6% 55px;
+        }
+
+
+        .necklace-intro .eyebrow {
+            margin-bottom: 15px;
+        }
+
+
+        .necklace-intro h2 {
+            font-size: clamp(32px, 5vw, 55px);
+            font-weight: 400;
+
+            margin: 0 0 20px;
+        }
+
+
+        .necklace-intro p {
+            max-width: 680px;
+            margin: 0 auto;
+
+            line-height: 1.9;
+            opacity: 0.72;
+        }
+
+
+        /* =====================================================
+           PRODUCTS
+        ===================================================== */
+
+        .necklace-products {
+            padding: 35px 6% 110px;
+        }
+
+
+        .necklace-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 35px;
+        }
+
+
+        .necklace-card {
+            position: relative;
+
+            background: #fff;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
+        }
+
+
+        .necklace-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 18px 45px
+                rgba(0,0,0,0.10);
+        }
+
+
+        /* =====================================================
+           IMAGE
+        ===================================================== */
+
+        .necklace-image {
+            position: relative;
+
+            width: 100%;
+
+            aspect-ratio: 4 / 5;
+
+            overflow: hidden;
+
+            background: #eeeae4;
+        }
+
+
+        .necklace-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform 0.65s ease;
+        }
+
+
+        .necklace-card:hover
+        .necklace-image img {
+            transform: scale(1.06);
+        }
+
+
+        /* =====================================================
+           BADGE
+        ===================================================== */
+
+        .necklace-badge {
+            position: absolute;
+
+            top: 15px;
+            left: 15px;
+
+            z-index: 3;
+
+            background: #222;
+            color: #fff;
+
+            padding: 8px 13px;
+
+            font-size: 10px;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           PRODUCT INFO
+        ===================================================== */
+
+        .necklace-info {
+            padding: 23px 20px 27px;
+
+            text-align: center;
+        }
+
+
+        .necklace-info h3 {
+            font-size: 20px;
+
+            font-weight: 400;
+
+            margin: 0 0 10px;
+        }
+
+
+        .necklace-info p {
+            font-size: 13px;
+
+            line-height: 1.6;
+
+            opacity: 0.65;
+
+            margin: 0 0 13px;
+        }
+
+
+        .necklace-price {
+            font-size: 16px;
+
+            letter-spacing: 0.5px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .necklace-btn {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-width: 155px;
+
+            padding: 12px 20px;
+
+            border: 1px solid #222;
+
+            background: #222;
+
+            color: #fff;
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            transition: 0.3s ease;
+        }
+
+
+        .necklace-btn:hover {
+            background: transparent;
+            color: #222;
+        }
+
+
+        /* =====================================================
+           FEATURE SECTION
+        ===================================================== */
+
+        .necklace-feature {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            min-height: 600px;
+
+            background: #eee9e2;
+        }
+
+
+        .necklace-feature-image {
+            min-height: 600px;
+        }
+
+
+        .necklace-feature-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        .necklace-feature-content {
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            padding: 80px 10%;
+        }
+
+
+        .necklace-feature-content .eyebrow {
+            margin-bottom: 18px;
+        }
+
+
+        .necklace-feature-content h2 {
+            font-size: clamp(35px, 5vw, 60px);
+
+            line-height: 1.1;
+
+            font-weight: 400;
+
+            margin: 0 0 25px;
+        }
+
+
+        .necklace-feature-content p {
+            max-width: 500px;
+
+            line-height: 1.9;
+
+            opacity: 0.72;
+
+            margin-bottom: 30px;
+        }
+
+
+        .feature-link {
+            display: inline-block;
+
+            width: fit-content;
+
+            color: #222;
+
+            text-decoration: none;
+
+            border-bottom: 1px solid #222;
+
+            padding-bottom: 7px;
+
+            letter-spacing: 1px;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+
+            .necklace-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 750px) {
+
+            .necklace-feature {
+                grid-template-columns: 1fr;
+            }
+
+
+            .necklace-feature-image {
+                min-height: 500px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .necklace-hero {
+                min-height: 450px;
+
+                padding: 80px 6%;
+            }
+
+
+            .necklace-hero h1 {
+                font-size: 50px;
+            }
+
+
+            .necklace-hero p {
+                font-size: 15px;
+            }
+
+
+            .necklace-intro {
+                padding:
+                    65px 6% 40px;
+            }
+
+
+            .necklace-products {
+                padding:
+                    25px 5% 75px;
+            }
+
+
+            .necklace-grid {
+                grid-template-columns: 1fr;
+
+                gap: 25px;
+            }
+
+
+            .necklace-feature-image {
+                min-height: 420px;
+            }
+
+
+            .necklace-feature-content {
+                padding:
+                    65px 8%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <div class="top-bar">
+
+        Complimentary delivery on orders over Rs. 15,000
+
+    </div>
+
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+
+            <button
+                class="mobile-menu-btn"
+                type="button"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                ZAVELLA<span>.</span>
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="rings.html">
+                    Rings
+                </a>
+
+                <a href="earings.html">
+                    Earrings
+                </a>
+
+                <a href="bracelets.html">
+                    Bracelets
+                </a>
+
+                <a
+                    href="necklace.html"
+                    class="active"
+                >
+                    Necklaces
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <a
+                    href="cart.html"
+                    class="header-action cart-link"
+                    aria-label="Shopping bag"
+                >
+
+                    ♡
+
+                    <span class="cart-count">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="necklace-page">
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="necklace-hero">
+
+            <div class="necklace-hero-content">
+
+                <div class="necklace-eyebrow">
+
+                    ZAVELLA — NECKLACE COLLECTION
+
+                </div>
+
+
+                <h1>
+
+                    Necklaces
+
+                </h1>
+
+
+                <p>
+
+                    Elegant pieces designed to sit beautifully
+                    close to the heart and complete every look.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             INTRO
+        ================================================== -->
+
+        <section class="necklace-intro">
+
+            <div class="eyebrow">
+
+                THE COLLECTION
+
+            </div>
+
+
+            <h2>
+
+                Grace Around Your Neck
+
+            </h2>
+
+
+            <p>
+
+                Discover refined necklaces created for
+                everyday elegance, special occasions and
+                unforgettable moments.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             15 NECKLACE PRODUCTS
+        ================================================== -->
+
+        <section class="necklace-products">
+
+            <div class="necklace-grid">
+
+
+                <!-- 01 -->
+
+                <article class="necklace-card">
+
+                    <div class="necklace-image">
+
+                        <span class="necklace-badge">
+                            Bestseller
+                        </span>
+
+                        <img
+                            src="images/necklace-1.jpg"
+                            alt="ZAVELLA Necklace 1"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="necklace-info">
+
+                        <h3>
+                            Pearl Elegance Necklace
+                        </h3>
+
+                        <p>
+                            A delicate pearl-inspired
+                            necklace with timeless beauty.
+                        </p>
+
+                        <div class="necklace-price">
+                            Rs. 4,500
+                        </div>
+
+                        <a
+                            href="contact.html"
+                            class="necklace-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 02 -->
+
+                <article class="necklace-card">
+
+                    <div class="necklace-image">
+
+                        <img
+                            src="images/necklace-2.jpg"
+                            alt="ZAVELLA Necklace 2"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="necklace-info">
+
+                        <h3>
+                            Classic Gold Chain
+                        </h3>
+
+                        <p>
+                            A refined chain designed for
+                            effortless everyday styling.
+                        </p>
+
+                        <div class="necklace-price">
+                            Rs. 3,950
+                        </div>
+
+                        <a
+                            href="contact.html"
+                            class="necklace-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 03 -->
+
+                <article class="necklace-card">
+
+                    <div class="necklace-image">
+
+                        <span class="necklace-badge">
+                            New
+                        </span>
+
+                        <img
+                            src="images/necklace-3.jpg"
+                            alt="ZAVELLA Necklace 3"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="necklace-info">
+
+                        <h3>
+                            Crystal Pendant
+                        </h3>
+
+                        <p>
+                            A sparkling pendant for a
+                            sophisticated finish.
+                        </p>
+
+                        <div class="necklace-price">
+                            Rs. 5,200
+                        </div>
+
+                        <a
+                            href="contact.html"
+                            class="necklace-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 04 -->
+
+                <article class="necklace-card">
+
+                    <div class="necklace-image">
+
+                        <img
+                            src="images/necklace-4.jpg"
+                            alt="ZAVELLA Necklace 4"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="necklace-info">
+
+                        <h3>
+                            Layered Luxury
+                        </h3>
+
+                        <p>
+                            Modern layered styling for
+                            an elegant statement.
+                        </p>
+
+                        <div class="necklace-price">
+                            Rs. 4,800
+                        </div>
+
+                        <a
+                            href="contact.html"
+                            class="necklace-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 05 -->
+
+                <article class="necklace-card">
+
+                    <div class="necklace-image">
+
+                        <img
+                            src="images/necklace-5.jpg"
+                            alt="ZAVELLA Necklace 5"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="necklace-info">
+
+                        <h3>
+                            Heart Pendant
+                        </h3>
+
+                        <p>
+                            A graceful heart design for
+                            meaningful moments.
+                        </p>
+
+                        <div class="necklace-price">
+                            Rs. 4,250
+                        </div>
+
+                        <a
+                            href="contact.html"
+                            class="necklace-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 06 -->
+
+                <article class="necklace-card">
+
+                    <div class="necklace-image">
+
+                        <img
+                            src="images/necklace-6.jpg"
+                            alt="ZAVELLA Necklace 6"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="necklace-info">
+
+                        <h3>
+                            Minimal Gold Necklace
+                        </h3>
+
+                        <p>
+                            Simple, refined and perfect
+                            for everyday elegance.
+                        </p>
+
+                        <div class="necklace-price">
+                            Rs. 3,700
+                        </div>
+
+                        <a
+                            href="contact.html"
+                            class="necklace-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 07 -->
+
+                <article class="necklace-card">
+
+                    <div class="necklace-image">
+
+                        <span class="necklace-badge">
+                            Popular
+                        </span>
+
+                        <img
+                            src="images/necklace-7.jpg"
+                            alt="ZAVELLA Necklace 7"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="necklace-info">
+
+                        <h3>
+                            Statement Necklace
+                        </h3>
+
+                        <p>
+                            Designed to make every
+                            entrance unforgettable.
+                        </p>
+
+                        <div class="necklace-price">
+                            Rs. 6,500
+                        </div>
+
+                        <a
+                            href="contact.html"
+                            class="necklace-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 08 -->
+
+                <article class="necklace-card">
+
+                    <div class="necklace-image">
+
+                        <img
+                            src="images/necklace-8.jpg"
+                            alt="ZAVELLA Necklace 8"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="necklace-info">
+
+                        <h3>
+                            Luxury Pendant
+                        </h3>
+
+                        <p>
+                            Sophisticated detailing for
+                            an elevated look.
+                        </p>
+
+                        <div class="necklace-price">
+                            Rs. 5,900
+                        </div>
+
+                        <a
+                            href="contact.html"
+                            class="necklace-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 09 -->
+
+                <article class="necklace-card">
+
+                    <div class="necklace-image">
+
+                        <img
+                            src="images/necklace-9.jpg"
+                            alt="ZAVELLA Necklace 9"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="necklace-info">
+
+                        <h3>
+                            Diamond Glow Necklace
+                        </h3>
+
+                        <p>
+                            Elegant sparkle for special
+                            occasions and evening looks.
+                        </p>
+
+                        <div class="necklace-price">
+                            Rs. 7,200
+                        </div>
+
+                        <a
+                            href="contact.html"
+                            class="necklace-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 10 -->
+
+                <article class="necklace-card">
+
+                    <div class="necklace-image">
+
+                        <span class="necklace-badge">
+                            New
+                        </span>
+
+                        <img
+                            src="images/necklace-10.jpg"
+                            alt="ZAVELLA Necklace 10"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="necklace-info">
+
+                        <h3>
+                            Rose Charm Necklace
+                        </h3>
+
+                        <p>
+                            A delicate charm design with
+                            romantic feminine detail.
+                        </p>
+
+                        <div class="necklace-price">
+                            Rs. 4,950
+                        </div>
+
+                        <a
+                            href="contact.html"
+                            class="necklace-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 11 -->
+
+                <article class="necklace-card">
+
+                    <div class="necklace-image">
+
+                        <img
+                            src="images/necklace-11.jpg"
+                            alt="ZAVELLA Necklace 11"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="necklace-info">
+
+                        <h3>
+                            Celestial Necklace
+                        </h3>
+
+                        <p>
+                            A beautiful celestial-inspired
+                            design with subtle shine.
+                        </p>
+
+                        <div class="necklace-price">
+                            Rs. 5,450
+                        </div>
+
+                        <a
+                            href="contact.html"
+                            class="necklace-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 12 -->
+
+                <article class="necklace-card">
+
+                    <div class="necklace-image">
+
+                        <img
+                            src="images/necklace-12.jpg"
+                            alt="ZAVELLA Necklace 12"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="necklace-info">
+
+                        <h3>
+                            Vintage Pearl Chain
+                        </h3>
+
+                        <p>
+                            Classic pearl detailing with
+                            a graceful vintage character.
+                        </p>
+
+                        <div class="necklace-price">
+                            Rs. 6,100
+                        </div>
+
+                        <a
+                            href="contact.html"
+                            class="necklace-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 13 -->
+
+                <article class="necklace-card">
+
+                    <div class="necklace-image">
+
+                        <span class="necklace-badge">
+                            Bestseller
+                        </span>
+
+                        <img
+                            src="images/necklace-13.jpg"
+                            alt="ZAVELLA Necklace 13"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="necklace-info">
+
+                        <h3>
+                            Signature Pendant
+                        </h3>
+
+                        <p>
+                            A signature ZAVELLA-inspired
+                            piece for every collection.
+                        </p>
+
+                        <div class="necklace-price">
+                            Rs. 5,750
+                        </div>
+
+                        <a
+                            href="contact.html"
+                            class="necklace-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 14 -->
+
+                <article class="necklace-card">
+
+                    <div class="necklace-image">
+
+                        <img
+                            src="images/necklace-14.jpg"
+                            alt="ZAVELLA Necklace 14"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="necklace-info">
+
+                        <h3>
+                            Elegant Layer Necklace
+                        </h3>
+
+                        <p>
+                            A sophisticated layered piece
+                            made for modern styling.
+                        </p>
+
+                        <div class="necklace-price">
+                            Rs. 6,300
+                        </div>
+
+                        <a
+                            href="contact.html"
+                            class="necklace-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- 15 -->
+
+                <article class="necklace-card">
+
+                    <div class="necklace-image">
+
+                        <span class="necklace-badge">
+                            Exclusive
+                        </span>
+
+                        <img
+                            src="images/necklace-15.jpg"
+                            alt="ZAVELLA Necklace 15"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="necklace-info">
+
+                        <h3>
+                            Royal Pearl Necklace
+                        </h3>
+
+                        <p>
+                            A luxurious statement piece
+                            created for unforgettable occasions.
+                        </p>
+
+                        <div class="necklace-price">
+                            Rs. 8,500
+                        </div>
+
+                        <a
+                            href="contact.html"
+                            class="necklace-btn"
+                        >
+                            View Details
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FEATURE
+        ================================================== -->
+
+        <section class="necklace-feature">
+
+
+            <div class="necklace-feature-image">
+
+                <img
+                    src="images/model-1.jpg"
+                    alt="ZAVELLA luxury necklace collection"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="necklace-feature-content">
+
+                <div class="eyebrow">
+                    ZAVELLA SIGNATURE
+                </div>
+
+
+                <h2>
+                    Designed To Be
+                    Remembered.
+                </h2>
+
+
+                <p>
+                    Every ZAVELLA necklace is selected
+                    with elegance, versatility and
+                    timeless beauty in mind. Wear it
+                    alone or layer it with your favourite
+                    pieces to create your own signature.
+                </p>
+
+
+                <a
+                    href="shop.html"
+                    class="feature-link"
+                >
+                    Explore All Jewellery →
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         NEWSLETTER
+    ====================================================== -->
+
+    <section class="newsletter">
+
+        <h2>
+            Join The World Of ZAVELLA
+        </h2>
+
+
+        <p>
+            Be the first to discover new collections,
+            exclusive pieces and special offers.
+        </p>
+
+
+        <form
+            class="newsletter-form"
+            onsubmit="subscribeNewsletter(event)"
+        >
+
+            <input
+                type="email"
+                placeholder="Your email address"
+                required
+            >
+
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-grid">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+                    ZAVELLA<span>.</span>
+                </a>
+
+
+                <p>
+                    Timeless jewellery for modern women.
+                    Discover refined pieces designed
+                    to become part of your story.
+                </p>
+
+            </div>
+
+
+
+            <!-- SHOP -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Shop
+                </h4>
+
+
+                <a href="shop.html">
+                    All Jewellery
+                </a>
+
+
+                <a href="rings.html">
+                    Rings
+                </a>
+
+
+                <a href="earings.html">
+                    Earrings
+                </a>
+
+
+                <a href="bracelets.html">
+                    Bracelets
+                </a>
+
+
+                <a href="necklace.html">
+                    Necklaces
+                </a>
+
+            </div>
+
+
+
+            <!-- INFORMATION -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Information
+                </h4>
+
+
+                <a href="about.html">
+                    Our Story
+                </a>
+
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+
+                <a href="#">
+                    Shipping & Returns
+                </a>
+
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+
+
+            <!-- CONNECT -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Connect
+                </h4>
+
+
+                <a href="#">
+                    Instagram
+                </a>
+
+
+                <a href="#">
+                    Facebook
+                </a>
+
+
+                <a href="#">
+                    Pinterest
+                </a>
+
+
+                <a
+                    href="https://wa.me/923237958455"
+                    target="_blank"
+                >
+                    WhatsApp
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 ZAVELLA. All Rights Reserved.
+            </span>
+
+
+            <span>
+                Luxury Jewellery
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         WHATSAPP
+    ====================================================== -->
+
+    <a
+        href="https://wa.me/923237958455"
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="WhatsApp ZAVELLA"
+    >
+        ☎
+    </a>
+
+
+
+    <div class="toast"></div>
+
+
+
+    <!-- MAIN JS -->
+
+    <script src="script.js"></script>
+
+
+
+    <!-- NEWSLETTER -->
+
+    <script>
+
+        function subscribeNewsletter(event) {
+
+            event.preventDefault();
+
+            alert(
+                "Thank you for subscribing to ZAVELLA!"
+            );
+
+            event.target.reset();
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

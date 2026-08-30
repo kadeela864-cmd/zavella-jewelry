@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Collections | ZAVELLA</title>
+
+    <meta name="description"
+          content="Explore the latest ZAVELLA luxury jewellery collections.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ==============================
+           COLLECTIONS HERO
+        ============================== */
+
+        .collections-hero {
+            min-height: 55vh;
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.35),
+                    rgba(0,0,0,0.35)
+                ),
+                url("images/shop-banner.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+
+            padding: 80px 20px;
+        }
+
+        .collections-hero-content {
+            max-width: 750px;
+        }
+
+        .collections-hero .eyebrow {
+            letter-spacing: 4px;
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
+
+        .collections-hero h1 {
+            font-size: clamp(48px, 7vw, 82px);
+            font-weight: 400;
+            margin: 0 0 20px;
+        }
+
+        .collections-hero p {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* ==============================
+           COLLECTIONS SECTION
+        ============================== */
+
+        .collections-section {
+            padding: 100px 6%;
+        }
+
+        .collections-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .collections-heading .eyebrow {
+            color: #111;
+            letter-spacing: 3px;
+            font-size: 12px;
+            margin-bottom: 14px;
+        }
+
+        .collections-heading h2 {
+            color: #111;
+            font-size: clamp(35px, 5vw, 58px);
+            font-weight: 400;
+            margin: 0 0 18px;
+        }
+
+        .collections-heading p {
+            color: #111;
+            line-height: 1.8;
+        }
+
+
+        /* ==============================
+           COLLECTION GRID
+        ============================== */
+
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            max-width: 1250px;
+            margin: auto;
+        }
+
+        .collection-card {
+            position: relative;
+            height: 520px;
+            overflow: hidden;
+            text-decoration: none;
+            display: block;
+            background: #eee;
+        }
+
+        .collection-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.7s ease;
+        }
+
+        .collection-card:hover img {
+            transform: scale(1.07);
+        }
+
+        .collection-overlay {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 45px 25px;
+
+            background:
+                linear-gradient(
+                    transparent 35%,
+                    rgba(0,0,0,0.72)
+                );
+        }
+
+        .collection-content {
+            color: white;
+        }
+
+        .collection-content span {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .collection-content h3 {
+            font-size: 36px;
+            font-weight: 400;
+            margin: 10px 0;
+        }
+
+        .collection-content p {
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .collection-btn {
+            display: inline-block;
+            border-bottom: 1px solid white;
+            padding-bottom: 6px;
+            color: white;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+
+        /* ==============================
+           FEATURED COLLECTION
+        ============================== */
+
+        .featured-collection {
+            margin-top: 30px;
+            padding: 100px 7%;
+            background: #f4f0ea;
+            text-align: center;
+        }
+
+        .featured-collection .eyebrow {
+            color: #111;
+            font-size: 12px;
+            letter-spacing: 3px;
+        }
+
+        .featured-collection h2 {
+            color: #111;
+            font-size: clamp(36px, 5vw, 60px);
+            font-weight: 400;
+            margin: 15px auto 20px;
+        }
+
+        .featured-collection p {
+            color: #111;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.9;
+        }
+
+        .featured-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 30px;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .featured-btn:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media (max-width: 800px) {
+
+            .collections-hero {
+                min-height: 48vh;
+            }
+
+            .collections-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .collection-card {
+                height: 450px;
+            }
+
+            .collections-section {
+                padding: 75px 5%;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .collections-hero h1 {
+                font-size: 45px;
+            }
+
+            .collections-hero p {
+                font-size: 15px;
+            }
+
+            .collection-card {
+                height: 420px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+        Complimentary delivery on orders over Rs. 15,000
+    </div>
+
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <button
+                class="mobile-menu-btn"
+                type="button"
+                aria-label="Open menu">
+                ☰
+            </button>
+
+
+            <a href="index.html" class="logo">
+                ZAVELLA<span>.</span>
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="collections.html" class="active">
+                    Collections
+                </a>
+
+                <a href="rings.html">
+                    Rings
+                </a>
+
+                <a href="earings.html">
+                    Earrings
+                </a>
+
+                <a href="bracelets.html">
+                    Bracelets
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <a
+                    href="cart.html"
+                    class="header-action cart-link"
+                    aria-label="Shopping bag">
+
+                    ♡
+
+                    <span class="cart-count">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==============================
+         COLLECTIONS HERO
+    ============================== -->
+
+    <section class="collections-hero">
+
+        <div class="collections-hero-content">
+
+            <div class="eyebrow">
+                THE ZAVELLA EDIT
+            </div>
+
+            <h1>
+                Our Collections
+            </h1>
+
+            <p>
+                Discover jewellery collections designed
+                to celebrate elegance, individuality
+                and every unforgettable moment.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         COLLECTIONS
+    ============================== -->
+
+    <section class="collections-section">
+
+        <div class="collections-heading">
+
+            <div class="eyebrow">
+                EXPLORE ZAVELLA
+            </div>
+
+            <h2>
+                Find Your Signature
+            </h2>
+
+            <p>
+                From delicate everyday pieces to
+                statement jewellery, explore the
+                collections created for every style.
+            </p>
+
+        </div>
+
+
+        <div class="collections-grid">
+
+
+            <!-- RINGS -->
+
+            <a
+                href="rings.html"
+                class="collection-card">
+
+                <img
+                    src="images/collection-1.jpg"
+                    alt="ZAVELLA Rings"
+                    loading="lazy">
+
+                <div class="collection-overlay">
+
+                    <div class="collection-content">
+
+                        <span>
+                            Collection 01
+                        </span>
+
+                        <h3>
+                            Rings
+                        </h3>
+
+                        <p>
+                            Elegant pieces designed
+                            to make every gesture special.
+                        </p>
+
+                        <div class="collection-btn">
+                            Explore Rings →
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- EARRINGS -->
+
+            <a
+                href="earings.html"
+                class="collection-card">
+
+                <img
+                    src="images/collection-2.jpg"
+                    alt="ZAVELLA Earrings"
+                    loading="lazy">
+
+                <div class="collection-overlay">
+
+                    <div class="collection-content">
+
+                        <span>
+                            Collection 02
+                        </span>
+
+                        <h3>
+                            Earrings
+                        </h3>
+
+                        <p>
+                            Effortless sparkle designed
+                            to frame every look beautifully.
+                        </p>
+
+                        <div class="collection-btn">
+                            Explore Earrings →
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- BRACELETS -->
+
+            <a
+                href="bracelets.html"
+                class="collection-card">
+
+                <img
+                    src="images/collection-3.jpg"
+                    alt="ZAVELLA Bracelets"
+                    loading="lazy">
+
+                <div class="collection-overlay">
+
+                    <div class="collection-content">
+
+                        <span>
+                            Collection 03
+                        </span>
+
+                        <h3>
+                            Bracelets
+                        </h3>
+
+                        <p>
+                            Refined jewellery that adds
+                            a beautiful finishing touch.
+                        </p>
+
+                        <div class="collection-btn">
+                            Explore Bracelets →
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- ALL JEWELLERY -->
+
+            <a
+                href="shop.html"
+                class="collection-card">
+
+                <img
+                    src="images/collection-4.jpeg"
+                    alt="ZAVELLA Jewellery Collection"
+                    loading="lazy">
+
+                <div class="collection-overlay">
+
+                    <div class="collection-content">
+
+                        <span>
+                            Collection 04
+                        </span>
+
+                        <h3>
+                            All Jewellery
+                        </h3>
+
+                        <p>
+                            Explore the complete ZAVELLA
+                            jewellery edit.
+                        </p>
+
+                        <div class="collection-btn">
+                            Shop All Jewellery →
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         FEATURED STATEMENT
+    ============================== -->
+
+    <section class="featured-collection">
+
+        <div class="eyebrow">
+            ZAVELLA
+        </div>
+
+        <h2>
+            Jewellery Made For Your Story
+        </h2>
+
+        <p>
+            Every collection is carefully curated
+            to bring timeless beauty, modern elegance
+            and effortless confidence to your everyday.
+        </p>
+
+        <a
+            href="shop.html"
+            class="featured-btn">
+            Shop The Collection
+        </a>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    ZAVELLA<span>.</span>
+                </a>
+
+                <p>
+                    Timeless jewellery for modern women.
+                    Discover refined pieces designed
+                    to become part of your story.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Shop
+                </h4>
+
+                <a href="shop.html">
+                    All Jewellery
+                </a>
+
+                <a href="collections.html">
+                    Collections
+                </a>
+
+                <a href="rings.html">
+                    Rings
+                </a>
+
+                <a href="earings.html">
+                    Earrings
+                </a>
+
+                <a href="bracelets.html">
+                    Bracelets
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Information
+                </h4>
+
+                <a href="about.html">
+                    Our Story
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="#">
+                    Shipping & Returns
+                </a>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Connect
+                </h4>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="#">
+                    Pinterest
+                </a>
+
+                <a
+                    href="https://wa.me/923237958455"
+                    target="_blank">
+                    WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 ZAVELLA. All Rights Reserved.
+            </span>
+
+            <span>
+                Luxury Jewellery
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- WHATSAPP -->
+
+    <a
+        href="https://wa.me/923237958455"
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="WhatsApp ZAVELLA">
+
+        ☎
+
+    </a>
+
+
+    <div class="toast"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+

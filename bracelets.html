@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bracelets | ZAVELLA Luxury Jewellery</title>
+
+    <meta name="description" content="Discover the ZAVELLA luxury bracelet collection.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        Complimentary delivery on orders over Rs. 15,000
+    </div>
+
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <button
+                class="mobile-menu-btn"
+                type="button"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+
+            <a href="index.html" class="logo">
+                ZAVELLA<span>.</span>
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="rings.html">
+                    Rings
+                </a>
+
+                <a href="earings.html">
+                    earings
+                </a>
+
+                <a href="bracelets.html" class="active">
+                    Bracelets
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <button
+                    class="header-action"
+                    type="button"
+                    onclick="document.getElementById('braceletSearch').focus()"
+                    aria-label="Search"
+                >
+                    ⌕
+                </button>
+
+
+                <a href="cart.html" class="header-action cart-link">
+                    ♡
+                    <span class="cart-count">0</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <section
+            class="collection-banner"
+            style="background-image:url('images/model-7.jpg');"
+        >
+
+            <div class="collection-banner-content">
+
+                <div class="hero-eyebrow">
+                    ZAVELLA COLLECTION
+                </div>
+
+                <h1>
+                    Bracelets
+                </h1>
+
+                <p>
+                    Effortless elegance wrapped around your wrist.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="section">
+
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    Bracelets
+                </div>
+
+                <h2>
+                    The Art Of Adornment
+                </h2>
+
+                <p>
+                    Explore delicate chains, timeless bangles and
+                    statement bracelets created for modern elegance.
+                </p>
+
+            </div>
+
+
+
+            <div
+                style="
+                    max-width:700px;
+                    margin:0 auto 40px;
+                "
+            >
+
+                <input
+                    type="search"
+                    id="braceletSearch"
+                    placeholder="Search bracelets..."
+                    style="
+                        width:100%;
+                        padding:16px;
+                        border:1px solid #e6e0d5;
+                        outline:none;
+                        font-size:13px;
+                    "
+                >
+
+            </div>
+
+
+
+            <div class="shop-toolbar">
+
+                <div class="shop-result">
+                    15 bracelets
+                </div>
+
+
+                <div class="shop-filter">
+
+                    <label for="braceletSort">
+                        Sort
+                    </label>
+
+                    <select
+                        id="braceletSort"
+                        onchange="sortProducts(this.value)"
+                    >
+
+                        <option value="">
+                            Featured
+                        </option>
+
+                        <option value="low-high">
+                            Price: Low to High
+                        </option>
+
+                        <option value="high-low">
+                            Price: High to Low
+                        </option>
+
+                        <option value="name">
+                            Name
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="product-grid">
+
+
+                <article class="product-card" data-price="14500" data-name="Luna Gold Bracelet">
+
+                    <div class="product-image">
+
+                        <span class="product-badge">
+                            New
+                        </span>
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('bracelet-1','Luna Gold Bracelet',14500,'images/bracelet-1.jpg','Bracelet')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('bracelet-1','Luna Gold Bracelet',14500,'images/bracelet-1.jpg','Bracelet')"
+                        >
+                            <img
+                                src="images/bracelet-1.jpg"
+                                alt="Luna Gold Bracelet"
+                            >
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Bracelets
+                        </div>
+
+                        <h3 class="product-name">
+                            Luna Gold Bracelet
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 14,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="bracelet-1"
+                            data-product-name="Luna Gold Bracelet"
+                            data-product-price="14500"
+                            data-product-image="images/bracelet-1.jpg"
+                            data-product-category="Bracelet"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="16500" data-name="Elara Chain Bracelet">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('bracelet-2','Elara Chain Bracelet',16500,'images/bracelet-2.jpg','Bracelet')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('bracelet-2','Elara Chain Bracelet',16500,'images/bracelet-2.jpg','Bracelet')"
+                        >
+                            <img
+                                src="images/bracelet-2.jpg"
+                                alt="Elara Chain Bracelet"
+                            >
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Bracelets
+                        </div>
+
+                        <h3 class="product-name">
+                            Elara Chain Bracelet
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 16,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="bracelet-2"
+                            data-product-name="Elara Chain Bracelet"
+                            data-product-price="16500"
+                            data-product-image="images/bracelet-2.jpg"
+                            data-product-category="Bracelet"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="18500" data-name="Amara Pearl Bracelet">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('bracelet-3','Amara Pearl Bracelet',18500,'images/bracelet-3.jpg','Bracelet')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('bracelet-3','Amara Pearl Bracelet',18500,'images/bracelet-3.jpg','Bracelet')"
+                        >
+                            <img
+                                src="images/bracelet-3.jpg"
+                                alt="Amara Pearl Bracelet"
+                            >
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Bracelets
+                        </div>
+
+                        <h3 class="product-name">
+                            Amara Pearl Bracelet
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 18,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="bracelet-3"
+                            data-product-name="Amara Pearl Bracelet"
+                            data-product-price="18500"
+                            data-product-image="images/bracelet-3.jpg"
+                            data-product-category="Bracelet"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="21500" data-name="Celeste Diamond Bracelet">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('bracelet-4','Celeste Diamond Bracelet',21500,'images/bracelet-4.jpg','Bracelet')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('bracelet-4','Celeste Diamond Bracelet',21500,'images/bracelet-4.jpg','Bracelet')"
+                        >
+                            <img
+                                src="images/bracelet-4.jpg"
+                                alt="Celeste Diamond Bracelet"
+                            >
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Bracelets
+                        </div>
+
+                        <h3 class="product-name">
+                            Celeste Diamond Bracelet
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 21,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="bracelet-4"
+                            data-product-name="Celeste Diamond Bracelet"
+                            data-product-price="21500"
+                            data-product-image="images/bracelet-4.jpg"
+                            data-product-category="Bracelet"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="24500" data-name="Serena Tennis Bracelet">
+
+                    <div class="product-image">
+
+                        <span class="product-badge">
+                            Bestseller
+                        </span>
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('bracelet-5','Serena Tennis Bracelet',24500,'images/bracelet-5.jpg','Bracelet')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('bracelet-5','Serena Tennis Bracelet',24500,'images/bracelet-5.jpg','Bracelet')"
+                        >
+                            <img
+                                src="images/bracelet-5.jpg"
+                                alt="Serena Tennis Bracelet"
+                            >
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Bracelets
+                        </div>
+
+                        <h3 class="product-name">
+                            Serena Tennis Bracelet
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 24,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="bracelet-5"
+                            data-product-name="Serena Tennis Bracelet"
+                            data-product-price="24500"
+                            data-product-image="images/bracelet-5.jpg"
+                            data-product-category="Bracelet"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="19500" data-name="Aurora Gold Cuff">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('bracelet-6','Aurora Gold Cuff',19500,'images/bracelet-6.jpg','Bracelet')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('bracelet-6','Aurora Gold Cuff',19500,'images/bracelet-6.jpg','Bracelet')"
+                        >
+                            <img
+                                src="images/bracelet-6.jpg"
+                                alt="Aurora Gold Cuff"
+                            >
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Bracelets
+                        </div>
+
+                        <h3 class="product-name">
+                            Aurora Gold Cuff
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 19,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="bracelet-6"
+                            data-product-name="Aurora Gold Cuff"
+                            data-product-price="19500"
+                            data-product-image="images/bracelet-6.jpg"
+                            data-product-category="Bracelet"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="17500" data-name="Isla Charm Bracelet">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('bracelet-7','Isla Charm Bracelet',17500,'images/bracelet-7.jpg','Bracelet')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('bracelet-7','Isla Charm Bracelet',17500,'images/bracelet-7.jpg','Bracelet')"
+                        >
+                            <img
+                                src="images/bracelet-7.jpg"
+                                alt="Isla Charm Bracelet"
+                            >
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Bracelets
+                        </div>
+
+                        <h3 class="product-name">
+                            Isla Charm Bracelet
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 17,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="bracelet-7"
+                            data-product-name="Isla Charm Bracelet"
+                            data-product-price="17500"
+                            data-product-image="images/bracelet-7.jpg"
+                            data-product-category="Bracelet"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="28500" data-name="Valeria Statement Cuff">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('bracelet-8','Valeria Statement Cuff',28500,'images/bracelet-8.jpg','Bracelet')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('bracelet-8','Valeria Statement Cuff',28500,'images/bracelet-8.jpg','Bracelet')"
+                        >
+                            <img
+                                src="images/bracelet-8.jpg"
+                                alt="Valeria Statement Cuff"
+                            >
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Bracelets
+                        </div>
+
+                        <h3 class="product-name">
+                            Valeria Statement Cuff
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 28,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="bracelet-8"
+                            data-product-name="Valeria Statement Cuff"
+                            data-product-price="28500"
+                            data-product-image="images/bracelet-8.jpg"
+                            data-product-category="Bracelet"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="15500" data-name="Mira Minimal Bracelet">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('bracelet-9','Mira Minimal Bracelet',15500,'images/bracelet-9.jpg','Bracelet')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('bracelet-9','Mira Minimal Bracelet',15500,'images/bracelet-9.jpg','Bracelet')"
+                        >
+                            <img
+                                src="images/bracelet-9.jpg"
+                                alt="Mira Minimal Bracelet"
+                            >
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Bracelets
+                        </div>
+
+                        <h3 class="product-name">
+                            Mira Minimal Bracelet
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 15,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="bracelet-9"
+                            data-product-name="Mira Minimal Bracelet"
+                            data-product-price="15500"
+                            data-product-image="images/bracelet-9.jpg"
+                            data-product-category="Bracelet"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="3500" data-name="Aria Crystal Bracelet">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('bracelet-10','Aria Crystal Bracelet',3500,'images/bracelet-10.jpg','Bracelet')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('bracelet-10','Aria Crystal Bracelet',3500,'images/bracelet-10.jpg','Bracelet')"
+                        >
+                            <img
+                                src="images/bracelet-10.jpg"
+                                alt="Aria Crystal Bracelet"
+                            >
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Bracelets
+                        </div>
+
+                        <h3 class="product-name">
+                            Aria Crystal Bracelet
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 30,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="bracelet-10"
+                            data-product-name="Aria Crystal Bracelet"
+                            data-product-price="3500"
+                            data-product-image="images/bracelet-10.jpg"
+                            data-product-category="Bracelet"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="22500" data-name="Nora Pearl Chain Bracelet">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('bracelet-11','Nora Pearl Chain Bracelet',22500,'images/bracelet-11.jpg','Bracelet')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('bracelet-11','Nora Pearl Chain Bracelet',22500,'images/bracelet-11.jpg','Bracelet')"
+                        >
+                            <img
+                                src="images/bracelet-11.jpg"
+                                alt="Nora Pearl Chain Bracelet"
+                            >
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Bracelets
+                        </div>
+
+                        <h3 class="product-name">
+                            Nora Pearl Chain Bracelet
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 22,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="bracelet-11"
+                            data-product-name="Nora Pearl Chain Bracelet"
+                            data-product-price="22500"
+                            data-product-image="images/bracelet-11.jpg"
+                            data-product-category="Bracelet"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="32500" data-name="Sapphire Grace Bracelet">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('bracelet-12','Sapphire Grace Bracelet',32500,'images/bracelet-12.jpg','Bracelet')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('bracelet-12','Sapphire Grace Bracelet',32500,'images/bracelet-12.jpg','Bracelet')"
+                        >
+                            <img
+                                src="images/bracelet-12.jpg"
+                                alt="Sapphire Grace Bracelet"
+                            >
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Bracelets
+                        </div>
+
+                        <h3 class="product-name">
+                            Sapphire Grace Bracelet
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 32,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="bracelet-12"
+                            data-product-name="Sapphire Grace Bracelet"
+                            data-product-price="32500"
+                            data-product-image="images/bracelet-12.jpg"
+                            data-product-category="Bracelet"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="2500" data-name="Clara Pearl Bracelet">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('bracelet-13','Clara Pearl Bracelet',2500,'images/bracelet-13.jpg','Bracelet')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('bracelet-13','Clara Pearl Bracelet',2500,'images/bracelet-13.jpg','Bracelet')"
+                        >
+                            <img
+                                src="images/bracelet-13.jpg"
+                                alt="Clara Pearl Bracelet"
+                            >
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Bracelets
+                        </div>
+
+                        <h3 class="product-name">
+                            Clara Pearl Bracelet
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 20,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="bracelet-13"
+                            data-product-name="Clara Pearl Bracelet"
+                            data-product-price="2500"
+                            data-product-image="images/bracelet-13.jpg"
+                            data-product-category="Bracelet"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="26500" data-name="Evelyn Diamond Bracelet">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('bracelet-14','Evelyn Diamond Bracelet',26500,'images/bracelet-14.jpg','Bracelet')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('bracelet-14','Evelyn Diamond Bracelet',26500,'images/bracelet-14.jpg','Bracelet')"
+                        >
+                            <img
+                                src="images/bracelet-14.jpg"
+                                alt="Evelyn Diamond Bracelet"
+                            >
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Bracelets
+                        </div>
+
+                        <h3 class="product-name">
+                            Evelyn Diamond Bracelet
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 26,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="bracelet-14"
+                            data-product-name="Evelyn Diamond Bracelet"
+                            data-product-price="26500"
+                            data-product-image="images/bracelet-14.jpg"
+                            data-product-category="Bracelet"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="38500" data-name="Seraphine Luxury Bracelet">
+
+                    <div class="product-image">
+
+                        <span class="product-badge">
+                            Exclusive
+                        </span>
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('bracelet-15','Seraphine Luxury Bracelet',38500,'images/bracelet-15.jpg','Bracelet')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('bracelet-15','Seraphine Luxury Bracelet',38500,'images/bracelet-15.jpg','Bracelet')"
+                        >
+                            <img
+                                src="images/bracelet-15.jpg"
+                                alt="Seraphine Luxury Bracelet"
+                            >
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Bracelets
+                        </div>
+
+                        <h3 class="product-name">
+                            Seraphine Luxury Bracelet
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 38,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="bracelet-15"
+                            data-product-name="Seraphine Luxury Bracelet"
+                            data-product-price="38500"
+                            data-product-image="images/bracelet-15.jpg"
+                            data-product-category="Bracelet"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <section class="newsletter">
+
+            <h2>
+                Join The World Of Zavella
+            </h2>
+
+            <p>
+                Be the first to discover new collections.
+            </p>
+
+            <form class="newsletter-form">
+
+                <input
+                    type="email"
+                    placeholder="Your email address"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer class="site-footer">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    ZAVELLA<span>.</span>
+                </a>
+
+                <p>
+                    Timeless jewellery for modern women.
+                    Discover refined pieces designed to
+                    become part of your story.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Shop
+                </h4>
+
+                <a href="shop.html">
+                    All Jewellery
+                </a>
+
+                <a href="rings.html">
+                    Rings
+                </a>
+
+                <a href="earings.html">
+                    earings
+                </a>
+
+                <a href="bracelets.html">
+                    Bracelets
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Information
+                </h4>
+
+                <a href="about.html">
+                    Our Story
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="#">
+                    Shipping & Returns
+                </a>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Follow
+                </h4>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="#">
+                    Pinterest
+                </a>
+
+                <a
+                    href="https://wa.me/923237958455"
+                    target="_blank"
+                >
+                    WhatsApp
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 226 ZAVELLA. All Rights Reserved.
+            </span>
+
+            <span>
+                Luxury Jewellery
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <a
+        href="https://wa.me/923237958455"
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="WhatsApp Zavella"
+    >
+        ☎
+    </a>
+
+
+    <div class="toast"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```

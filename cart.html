@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Bag | ZAVELLA Luxury Jewellery</title>
+
+    <meta name="description" content="Review your ZAVELLA jewellery selection and place your order through WhatsApp.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        Complimentary delivery on orders over Rs. 15,000
+    </div>
+
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <button
+                class="mobile-menu-btn"
+                type="button"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+
+            <a href="index.html" class="logo">
+                ZAVELLA<span>.</span>
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="rings.html">
+                    Rings
+                </a>
+
+                <a href="earings.html">
+                    earings
+                </a>
+
+                <a href="bracelets.html">
+                    Bracelets
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <a
+                    href="cart.html"
+                    class="header-action cart-link"
+                    aria-label="Shopping bag"
+                >
+                    ♡
+                    <span class="cart-count">0</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <section class="page-title">
+
+            <div class="eyebrow">
+                ZAVELLA
+            </div>
+
+            <h1>
+                Your Bag
+            </h1>
+
+            <p>
+                Review your selected pieces before placing your order.
+            </p>
+
+        </section>
+
+
+
+        <section class="section cart-section">
+
+
+            <div id="cartContainer">
+
+
+                <div class="cart-layout">
+
+
+                    <div class="cart-products">
+
+                        <div class="cart-heading">
+
+                            <h2>
+                                Your Selection
+                            </h2>
+
+                            <span id="cartItemsCount">
+                                0 items
+                            </span>
+
+                        </div>
+
+
+                        <div id="cartItems">
+                        </div>
+
+
+                        <div class="continue-shopping">
+
+                            <a href="shop.html">
+                                ← Continue Shopping
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <aside class="cart-summary">
+
+                        <h2>
+                            Order Summary
+                        </h2>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <strong id="cartSubtotal">
+                                Rs. 0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Delivery
+                            </span>
+
+                            <strong id="cartDelivery">
+                                Rs. 250
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-note">
+                            Free delivery on orders over Rs. 15,000.
+                        </div>
+
+
+                        <div class="summary-total">
+
+                            <span>
+                                Total
+                            </span>
+
+                            <strong id="cartTotal">
+                                Rs. 250
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="whatsapp-order-btn"
+                            onclick="openWhatsAppOrder()"
+                        >
+                            Order via WhatsApp
+                        </button>
+
+
+                        <p class="secure-note">
+                            Your order will be sent directly to
+                            ZAVELLA WhatsApp.
+                        </p>
+
+                    </aside>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div
+                id="emptyCart"
+                class="empty-cart"
+                style="display:none;"
+            >
+
+                <div class="empty-cart-icon">
+                    ♡
+                </div>
+
+                <h2>
+                    Your Bag Is Empty
+                </h2>
+
+                <p>
+                    Discover something beautiful from our jewellery collection.
+                </p>
+
+                <a
+                    href="shop.html"
+                    class="primary-button"
+                >
+                    Explore Jewellery
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+
+        <section class="newsletter">
+
+            <h2>
+                Join The World Of Zavella
+            </h2>
+
+            <p>
+                Be the first to discover new collections.
+            </p>
+
+            <form
+                class="newsletter-form"
+                onsubmit="subscribeNewsletter(event)"
+            >
+
+                <input
+                    type="email"
+                    placeholder="Your email address"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer class="site-footer">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    ZAVELLA<span>.</span>
+                </a>
+
+                <p>
+                    Timeless jewellery for modern women.
+                    Discover refined pieces designed to
+                    become part of your story.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Shop
+                </h4>
+
+                <a href="shop.html">
+                    All Jewellery
+                </a>
+
+                <a href="rings.html">
+                    Rings
+                </a>
+
+                <a href="earings.html">
+                    earings
+                </a>
+
+                <a href="bracelets.html">
+                    Bracelets
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Information
+                </h4>
+
+                <a href="about.html">
+                    Our Story
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="#">
+                    Shipping & Returns
+                </a>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Follow
+                </h4>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="#">
+                    Pinterest
+                </a>
+
+                <a
+                    href="https://wa.me/923237958455"
+                    target="_blank"
+                >
+                    WhatsApp
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 226 ZAVELLA. All Rights Reserved.
+            </span>
+
+            <span>
+                Luxury Jewellery
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <a
+        href="https://wa.me/923237958455"
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="WhatsApp Zavella"
+    >
+        ☎
+    </a>
+
+
+    <div class="toast"></div>
+
+
+
+    <script>
+
+        const WHATSAPP_NUMBER = "923237958455";
+
+        function getCart() {
+
+            try {
+
+                return JSON.parse(
+                    localStorage.getItem("zavellaCart")
+                ) || [];
+
+            } catch (error) {
+
+                return [];
+
+            }
+
+        }
+
+
+        function saveCart(cart) {
+
+            localStorage.setItem(
+                "zavellaCart",
+                JSON.stringify(cart)
+            );
+
+        }
+
+
+        function formatPrice(price) {
+
+            return "Rs. " + Number(price).toLocaleString("en-PK");
+
+        }
+
+
+        function updateHeaderCartCount() {
+
+            const cart = getCart();
+
+            const count = cart.reduce(
+                (total, item) => total + Number(item.quantity || 1),
+                0
+            );
+
+            document.querySelectorAll(".cart-count").forEach(
+                element => {
+                    element.textContent = count;
+                }
+            );
+
+        }
+
+
+        function renderCart() {
+
+            const cart = getCart();
+
+            const cartItems = document.getElementById("cartItems");
+
+            const cartContainer =
+                document.getElementById("cartContainer");
+
+            const emptyCart =
+                document.getElementById("emptyCart");
+
+            const cartItemsCount =
+                document.getElementById("cartItemsCount");
+
+            if (!cart.length) {
+
+                cartContainer.style.display = "none";
+
+                emptyCart.style.display = "block";
+
+                updateHeaderCartCount();
+
+                return;
+
+            }
+
+
+            cartContainer.style.display = "block";
+
+            emptyCart.style.display = "none";
+
+
+            let subtotal = 0;
+
+            let totalQuantity = 0;
+
+
+            cartItems.innerHTML = "";
+
+
+            cart.forEach((item, index) => {
+
+                const quantity =
+                    Number(item.quantity || 1);
+
+                const price =
+                    Number(item.price || 0);
+
+                const itemTotal =
+                    price * quantity;
+
+                subtotal += itemTotal;
+
+                totalQuantity += quantity;
+
+
+                const itemHTML = `
+
+                    <div class="cart-item">
+
+                        <div class="cart-item-image">
+
+                            <img
+                                src="${item.image}"
+                                alt="${item.name}"
+                            >
+
+                        </div>
+
+
+                        <div class="cart-item-details">
+
+                            <div class="product-category">
+                                ${item.category || "Jewellery"}
+                            </div>
+
+                            <h3>
+                                ${item.name}
+                            </h3>
+
+                            <div class="cart-item-price">
+                                ${formatPrice(price)}
+                            </div>
+
+
+                            <div class="cart-item-controls">
+
+                                <button
+                                    type="button"
+                                    onclick="changeQuantity(${index}, -1)"
+                                >
+                                    −
+                                </button>
+
+                                <span>
+                                    ${quantity}
+                                </span>
+
+                                <button
+                                    type="button"
+                                    onclick="changeQuantity(${index}, 1)"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="cart-item-right">
+
+                            <strong>
+                                ${formatPrice(itemTotal)}
+                            </strong>
+
+                            <button
+                                type="button"
+                                class="remove-item"
+                                onclick="removeCartItem(${index})"
+                            >
+                                Remove
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+
+                cartItems.insertAdjacentHTML(
+                    "beforeend",
+                    itemHTML
+                );
+
+            });
+
+
+            const delivery =
+                subtotal >= 15000 ? 0 : 250;
+
+            const total =
+                subtotal + delivery;
+
+
+            document.getElementById(
+                "cartSubtotal"
+            ).textContent = formatPrice(subtotal);
+
+
+            document.getElementById(
+                "cartDelivery"
+            ).textContent =
+                delivery === 0
+                    ? "FREE"
+                    : formatPrice(delivery);
+
+
+            document.getElementById(
+                "cartTotal"
+            ).textContent = formatPrice(total);
+
+
+            cartItemsCount.textContent =
+                totalQuantity +
+                (totalQuantity === 1 ? " item" : " items");
+
+
+            updateHeaderCartCount();
+
+        }
+
+
+
+        function changeQuantity(index, change) {
+
+            const cart = getCart();
+
+            if (!cart[index]) {
+                return;
+            }
+
+
+            cart[index].quantity =
+                Number(cart[index].quantity || 1) + change;
+
+
+            if (cart[index].quantity <= 0) {
+
+                cart.splice(index, 1);
+
+            }
+
+
+            saveCart(cart);
+
+            renderCart();
+
+        }
+
+
+
+        function removeCartItem(index) {
+
+            const cart = getCart();
+
+            if (!cart[index]) {
+                return;
+            }
+
+
+            cart.splice(index, 1);
+
+            saveCart(cart);
+
+            renderCart();
+
+            showToast("Item removed from your bag.");
+
+        }
+
+
+
+        function openWhatsAppOrder() {
+
+            const cart = getCart();
+
+            if (!cart.length) {
+
+                showToast(
+                    "Your bag is empty."
+                );
+
+                return;
+
+            }
+
+
+            let subtotal = 0;
+
+            let totalQuantity = 0;
+
+
+            let message =
+                "✨ *ZAVELLA JEWELLERY ORDER* ✨\n\n";
+
+
+            message +=
+                "Hello ZAVELLA! I would like to place this order:\n\n";
+
+
+            cart.forEach((item, index) => {
+
+                const quantity =
+                    Number(item.quantity || 1);
+
+                const price =
+                    Number(item.price || 0);
+
+                const itemTotal =
+                    price * quantity;
+
+
+                subtotal += itemTotal;
+
+                totalQuantity += quantity;
+
+
+                message +=
+                    `${index + 1}. ${item.name}\n`;
+
+                message +=
+                    `Category: ${item.category || "Jewellery"}\n`;
+
+                message +=
+                    `Price: ${formatPrice(price)}\n`;
+
+                message +=
+                    `Quantity: ${quantity}\n`;
+
+                message +=
+                    `Item Total: ${formatPrice(itemTotal)}\n\n`;
+
+            });
+
+
+            const delivery =
+                subtotal >= 15000 ? 0 : 250;
+
+            const total =
+                subtotal + delivery;
+
+
+            message +=
+                "------------------------------\n";
+
+            message +=
+                `Subtotal: ${formatPrice(subtotal)}\n`;
+
+            message +=
+                `Delivery: ${
+                    delivery === 0
+                        ? "FREE"
+                        : formatPrice(delivery)
+                }\n`;
+
+            message +=
+                `TOTAL: ${formatPrice(total)}\n`;
+
+            message +=
+                `Total Items: ${totalQuantity}\n\n`;
+
+            message +=
+                "Please confirm my order. Thank you! 💎";
+
+
+            const whatsappURL =
+                "https://wa.me/" +
+                WHATSAPP_NUMBER +
+                "?text=" +
+                encodeURIComponent(message);
+
+
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+        }
+
+
+
+        function showToast(message) {
+
+            const toast =
+                document.querySelector(".toast");
+
+            if (!toast) {
+                return;
+            }
+
+
+            toast.textContent = message;
+
+            toast.classList.add("show");
+
+
+            setTimeout(() => {
+
+                toast.classList.remove("show");
+
+            }, 2500);
+
+        }
+
+
+
+        function subscribeNewsletter(event) {
+
+            event.preventDefault();
+
+            showToast(
+                "Thank you for joining ZAVELLA."
+            );
+
+            event.target.reset();
+
+        }
+
+
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function() {
+
+                renderCart();
+
+                updateHeaderCartCount();
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
+```

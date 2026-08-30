@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rings | ZAVELLA Luxury Jewellery</title>
+
+    <meta name="description" content="Discover the ZAVELLA luxury ring collection.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        Complimentary delivery on orders over Rs. 15,000
+    </div>
+
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <button
+                class="mobile-menu-btn"
+                type="button"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+
+            <a href="index.html" class="logo">
+                ZAVELLA<span>.</span>
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="shop.html">
+                    Shop
+                </a>
+
+                <a href="rings.html" class="active">
+                    Rings
+                </a>
+
+                <a href="earings.html">
+                    earings
+                </a>
+
+                <a href="bracelets.html">
+                    Bracelets
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <div class="header-actions">
+
+                <button
+                    class="header-action"
+                    type="button"
+                    onclick="document.getElementById('ringSearch').focus()"
+                    aria-label="Search"
+                >
+                    ⌕
+                </button>
+
+
+                <a href="cart.html" class="header-action cart-link">
+                    ♡
+                    <span class="cart-count">0</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <section
+            class="collection-banner"
+            style="background-image:url('images/model-3.jpg');"
+        >
+
+            <div class="collection-banner-content">
+
+                <div class="hero-eyebrow">
+                    ZAVELLA COLLECTION
+                </div>
+
+                <h1>
+                    Rings
+                </h1>
+
+                <p>
+                    A little brilliance for every chapter.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="section">
+
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    Rings
+                </div>
+
+                <h2>
+                    Find Your Signature Ring
+                </h2>
+
+                <p>
+                    From delicate everyday pieces to statement
+                    designs, discover a ring made to stay with you.
+                </p>
+
+            </div>
+
+
+
+            <div
+                style="
+                    max-width:700px;
+                    margin:0 auto 40px;
+                "
+            >
+
+                <input
+                    type="search"
+                    id="ringSearch"
+                    placeholder="Search rings..."
+                    style="
+                        width:100%;
+                        padding:16px;
+                        border:1px solid #e6e0d5;
+                        outline:none;
+                        font-size:13px;
+                    "
+                >
+
+            </div>
+
+
+
+            <div class="shop-toolbar">
+
+                <div class="shop-result">
+                    15 rings
+                </div>
+
+
+                <div class="shop-filter">
+
+                    <label for="ringSort">
+                        Sort
+                    </label>
+
+                    <select
+                        id="ringSort"
+                        onchange="sortProducts(this.value)"
+                    >
+
+                        <option value="">
+                            Featured
+                        </option>
+
+                        <option value="low-high">
+                            Price: Low to High
+                        </option>
+
+                        <option value="high-low">
+                            Price: High to Low
+                        </option>
+
+                        <option value="name">
+                            Name
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="product-grid">
+
+
+                <article class="product-card" data-price="18500" data-name="Celeste Diamond Ring">
+
+                    <div class="product-image">
+
+                        <span class="product-badge">
+                            New
+                        </span>
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('ring-1','Celeste Diamond Ring',18500,'images/ring-1.jpg','Ring')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('ring-1','Celeste Diamond Ring',18500,'images/ring-1.jpg','Ring')"
+                        >
+                            <img
+                                src="images/ring-1.jpg"
+                                alt="Celeste Diamond Ring"
+                            >
+                        </a>
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Rings
+                        </div>
+
+                        <h3 class="product-name">
+                            Celeste Diamond Ring
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 18,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="ring-1"
+                            data-product-name="Celeste Diamond Ring"
+                            data-product-price="18500"
+                            data-product-image="images/ring-1.jpg"
+                            data-product-category="Ring"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="22000" data-name="Amara Gold Ring">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('ring-2','Amara Gold Ring',22000,'images/ring-2.jpg','Ring')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('ring-2','Amara Gold Ring',22000,'images/ring-2.jpg','Ring')"
+                        >
+                            <img src="images/ring-2.jpg" alt="Amara Gold Ring">
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Rings
+                        </div>
+
+                        <h3 class="product-name">
+                            Amara Gold Ring
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 22,000
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="ring-2"
+                            data-product-name="Amara Gold Ring"
+                            data-product-price="22000"
+                            data-product-image="images/ring-2.jpg"
+                            data-product-category="Ring"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="24500" data-name="Elara Halo Ring">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('ring-3','Elara Halo Ring',24500,'images/ring-3.jpg','Ring')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('ring-3','Elara Halo Ring',24500,'images/ring-3.jpg','Ring')"
+                        >
+                            <img src="images/ring-3.jpg" alt="Elara Halo Ring">
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Rings
+                        </div>
+
+                        <h3 class="product-name">
+                            Elara Halo Ring
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 24,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="ring-3"
+                            data-product-name="Elara Halo Ring"
+                            data-product-price="24500"
+                            data-product-image="images/ring-3.jpg"
+                            data-product-category="Ring"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="28500" data-name="Aurora Emerald Ring">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('ring-4','Aurora Emerald Ring',28500,'images/ring-4.jpg','Ring')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('ring-4','Aurora Emerald Ring',28500,'images/ring-4.jpg','Ring')"
+                        >
+                            <img src="images/ring-4.jpg" alt="Aurora Emerald Ring">
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Rings
+                        </div>
+
+                        <h3 class="product-name">
+                            Aurora Emerald Ring
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 28,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="ring-4"
+                            data-product-name="Aurora Emerald Ring"
+                            data-product-price="28500"
+                            data-product-image="images/ring-4.jpg"
+                            data-product-category="Ring"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="31500" data-name="Serena Ruby Ring">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('ring-5','Serena Ruby Ring',31500,'images/ring-5.jpg','Ring')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('ring-5','Serena Ruby Ring',31500,'images/ring-5.jpg','Ring')"
+                        >
+                            <img src="images/ring-5.jpg" alt="Serena Ruby Ring">
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Rings
+                        </div>
+
+                        <h3 class="product-name">
+                            Serena Ruby Ring
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 31,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="ring-5"
+                            data-product-name="Serena Ruby Ring"
+                            data-product-price="31500"
+                            data-product-image="images/ring-5.jpg"
+                            data-product-category="Ring"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="26500" data-name="Sapphire Grace Ring">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('ring-6','Sapphire Grace Ring',26500,'images/ring-6.jpg','Ring')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('ring-6','Sapphire Grace Ring',26500,'images/ring-6.jpg','Ring')"
+                        >
+                            <img src="images/ring-6.jpg" alt="Sapphire Grace Ring">
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Rings
+                        </div>
+
+                        <h3 class="product-name">
+                            Sapphire Grace Ring
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 26,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="ring-6"
+                            data-product-name="Sapphire Grace Ring"
+                            data-product-price="26500"
+                            data-product-image="images/ring-6.jpg"
+                            data-product-category="Ring"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="19500" data-name="Liora Diamond Ring">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('ring-7','Liora Diamond Ring',19500,'images/ring-7.jpg','Ring')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('ring-7','Liora Diamond Ring',19500,'images/ring-7.jpg','Ring')"
+                        >
+                            <img src="images/ring-7.jpg" alt="Liora Diamond Ring">
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Rings
+                        </div>
+
+                        <h3 class="product-name">
+                            Liora Diamond Ring
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 19,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="ring-7"
+                            data-product-name="Liora Diamond Ring"
+                            data-product-price="19500"
+                            data-product-image="images/ring-7.jpg"
+                            data-product-category="Ring"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="33500" data-name="Valeria Statement Ring">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('ring-8','Valeria Statement Ring',33500,'images/ring-8.jpg','Ring')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('ring-8','Valeria Statement Ring',33500,'images/ring-8.jpg','Ring')"
+                        >
+                            <img src="images/ring-8.jpg" alt="Valeria Statement Ring">
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Rings
+                        </div>
+
+                        <h3 class="product-name">
+                            Valeria Statement Ring
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 33,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="ring-8"
+                            data-product-name="Valeria Statement Ring"
+                            data-product-price="33500"
+                            data-product-image="images/ring-8.jpg"
+                            data-product-category="Ring"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="17500" data-name="Mira Gold Ring">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('ring-9','Mira Gold Ring',17500,'images/ring-9.jpg','Ring')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('ring-9','Mira Gold Ring',17500,'images/ring-9.jpg','Ring')"
+                        >
+                            <img src="images/ring-9.jpg" alt="Mira Gold Ring">
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Rings
+                        </div>
+
+                        <h3 class="product-name">
+                            Mira Gold Ring
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 17,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="ring-9"
+                            data-product-name="Mira Gold Ring"
+                            data-product-price="17500"
+                            data-product-image="images/ring-9.jpg"
+                            data-product-category="Ring"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="29500" data-name="Isla Diamond Ring">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('ring-10','Isla Diamond Ring',29500,'images/ring-10.jpg','Ring')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('ring-10','Isla Diamond Ring',29500,'images/ring-10.jpg','Ring')"
+                        >
+                            <img src="images/ring-10.jpg" alt="Isla Diamond Ring">
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Rings
+                        </div>
+
+                        <h3 class="product-name">
+                            Isla Diamond Ring
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 29,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="ring-10"
+                            data-product-name="Isla Diamond Ring"
+                            data-product-price="29500"
+                            data-product-image="images/ring-10.jpg"
+                            data-product-category="Ring"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="24000" data-name="Evelyn Halo Ring">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('ring-11','Evelyn Halo Ring',24000,'images/ring-11.jpg','Ring')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('ring-11','Evelyn Halo Ring',24000,'images/ring-11.jpg','Ring')"
+                        >
+                            <img src="images/ring-11.jpg" alt="Evelyn Halo Ring">
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Rings
+                        </div>
+
+                        <h3 class="product-name">
+                            Evelyn Halo Ring
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 24,000
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="ring-11"
+                            data-product-name="Evelyn Halo Ring"
+                            data-product-price="24000"
+                            data-product-image="images/ring-11.jpg"
+                            data-product-category="Ring"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="34500" data-name="Aria Luxury Ring">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('ring-12','Aria Luxury Ring',34500,'images/ring-12.jpg','Ring')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('ring-12','Aria Luxury Ring',34500,'images/ring-12.jpg','Ring')"
+                        >
+                            <img src="images/ring-12.jpg" alt="Aria Luxury Ring">
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Rings
+                        </div>
+
+                        <h3 class="product-name">
+                            Aria Luxury Ring
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 34,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="ring-12"
+                            data-product-name="Aria Luxury Ring"
+                            data-product-price="34500"
+                            data-product-image="images/ring-12.jpg"
+                            data-product-category="Ring"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="27500" data-name="Nora Gemstone Ring">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('ring-13','Nora Gemstone Ring',27500,'images/ring-13.jpg','Ring')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('ring-13','Nora Gemstone Ring',27500,'images/ring-13.jpg','Ring')"
+                        >
+                            <img src="images/ring-13.jpg" alt="Nora Gemstone Ring">
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Rings
+                        </div>
+
+                        <h3 class="product-name">
+                            Nora Gemstone Ring
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 27,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="ring-13"
+                            data-product-name="Nora Gemstone Ring"
+                            data-product-price="27500"
+                            data-product-image="images/ring-13.jpg"
+                            data-product-category="Ring"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="21000" data-name="Clara Diamond Ring">
+
+                    <div class="product-image">
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('ring-14','Clara Diamond Ring',21000,'images/ring-14.jpg','Ring')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('ring-14','Clara Diamond Ring',21000,'images/ring-14.jpg','Ring')"
+                        >
+                            <img src="images/ring-14.jpg" alt="Clara Diamond Ring">
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Rings
+                        </div>
+
+                        <h3 class="product-name">
+                            Clara Diamond Ring
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 21,000
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="ring-14"
+                            data-product-name="Clara Diamond Ring"
+                            data-product-price="21000"
+                            data-product-image="images/ring-14.jpg"
+                            data-product-category="Ring"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="product-card" data-price="38500" data-name="Seraphine Cocktail Ring">
+
+                    <div class="product-image">
+
+                        <span class="product-badge">
+                            Exclusive
+                        </span>
+
+                        <button
+                            class="product-wishlist"
+                            onclick="toggleWishlist('ring-15','Seraphine Cocktail Ring',38500,'images/ring-15.jpg','Ring')"
+                        >
+                            ♡
+                        </button>
+
+                        <a
+                            href="javascript:void(0)"
+                            onclick="selectProduct('ring-15','Seraphine Cocktail Ring',38500,'images/ring-15.jpg','Ring')"
+                        >
+                            <img src="images/ring-15.jpg" alt="Seraphine Cocktail Ring">
+                        </a>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Rings
+                        </div>
+
+                        <h3 class="product-name">
+                            Seraphine Cocktail Ring
+                        </h3>
+
+                        <div class="product-price">
+                            Rs. 38,500
+                        </div>
+
+                        <button
+                            class="add-cart"
+                            data-product-id="ring-15"
+                            data-product-name="Seraphine Cocktail Ring"
+                            data-product-price="38500"
+                            data-product-image="images/ring-15.jpg"
+                            data-product-category="Ring"
+                        >
+                            Add to Bag
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <section class="newsletter">
+
+            <h2>
+                Join The World Of Zavella
+            </h2>
+
+            <p>
+                Be the first to discover new collections.
+            </p>
+
+            <form class="newsletter-form">
+
+                <input
+                    type="email"
+                    placeholder="Your email address"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer class="site-footer">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    ZAVELLA<span>.</span>
+                </a>
+
+                <p>
+                    Timeless jewellery for modern women.
+                    Discover refined pieces designed to
+                    become part of your story.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Shop
+                </h4>
+
+                <a href="shop.html">
+                    All Jewellery
+                </a>
+
+                <a href="rings.html">
+                    Rings
+                </a>
+
+                <a href="earings.html">
+                    earings
+                </a>
+
+                <a href="bracelets.html">
+                    Bracelets
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Information
+                </h4>
+
+                <a href="about.html">
+                    Our Story
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="#">
+                    Shipping & Returns
+                </a>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Follow
+                </h4>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="#">
+                    Pinterest
+                </a>
+
+                <a
+                    href="https://wa.me/923237958455"
+                    target="_blank"
+                >
+                    WhatsApp
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 226 ZAVELLA. All Rights Reserved.
+            </span>
+
+            <span>
+                Luxury Jewellery
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <a
+        href="https://wa.me/923237958455"
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="WhatsApp Zavella"
+    >
+        ☎
+    </a>
+
+
+    <div class="toast"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```

@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Contact | ZAVELLA Luxury Jewellery</title>
+
+<meta
+    name="description"
+    content="Contact ZAVELLA for jewellery orders, questions and customer support."
+>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+    /* =========================================
+       CONTACT HERO
+    ========================================= */
+
+    .contact-hero {
+        min-height: 500px;
+        position: relative;
+        overflow: hidden;
+        background: #eee5d8;
+    }
+
+    .contact-hero img {
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .contact-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0,0,0,.60),
+                rgba(0,0,0,.20),
+                rgba(0,0,0,.40)
+            );
+    }
+
+    .contact-hero-content {
+        position: absolute;
+        left: 8%;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        max-width: 650px;
+    }
+
+    .contact-hero-content .eyebrow {
+        font-size: 12px;
+        letter-spacing: 4px;
+        margin-bottom: 18px;
+    }
+
+    .contact-hero-content h1 {
+        font-size: clamp(50px, 7vw, 85px);
+        line-height: 1;
+        font-weight: 400;
+        margin: 0 0 22px;
+    }
+
+    .contact-hero-content p {
+        font-size: 17px;
+        line-height: 1.8;
+        max-width: 500px;
+    }
+
+
+    /* =========================================
+       CONTACT SECTION
+    ========================================= */
+
+    .contact-section {
+        padding: 100px 7%;
+        background: #fff;
+    }
+
+    .contact-grid {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 70px;
+        align-items: start;
+    }
+
+
+    /* =========================================
+       CONTACT INFO
+    ========================================= */
+
+    .contact-info .eyebrow {
+        color: #a16c21;
+        font-size: 12px;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+    }
+
+    .contact-info h2 {
+        color: #111;
+        font-size: clamp(38px, 5vw, 58px);
+        line-height: 1.1;
+        font-weight: 400;
+        margin: 0 0 25px;
+    }
+
+    .contact-info > p {
+        color: #333;
+        line-height: 1.9;
+        margin-bottom: 35px;
+    }
+
+    .contact-detail {
+        display: flex;
+        gap: 18px;
+        align-items: flex-start;
+        margin-bottom: 25px;
+    }
+
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f6ead8;
+        border: 1px solid #e5cda5;
+        font-size: 20px;
+    }
+
+    .contact-detail h4 {
+        margin: 0 0 6px;
+        color: #111;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .contact-detail p,
+    .contact-detail a {
+        margin: 0;
+        color: #333;
+        text-decoration: none;
+        line-height: 1.6;
+    }
+
+    .contact-detail a:hover {
+        color: #a16c21;
+    }
+
+
+    /* =========================================
+       WHATSAPP BOX
+    ========================================= */
+
+    .whatsapp-box {
+        margin-top: 35px;
+        padding: 25px;
+        background: #f8f0e4;
+        border: 1px solid #ead9bd;
+    }
+
+    .whatsapp-box h3 {
+        color: #111;
+        margin: 0 0 8px;
+        font-size: 21px;
+    }
+
+    .whatsapp-box p {
+        color: #333;
+        line-height: 1.7;
+        margin: 0 0 18px;
+    }
+
+    .whatsapp-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 24px;
+        background: #111;
+        color: white;
+        text-decoration: none;
+        transition: .3s ease;
+    }
+
+    .whatsapp-btn:hover {
+        background: #c49445;
+        transform: translateY(-2px);
+    }
+
+
+    /* =========================================
+       CONTACT FORM
+    ========================================= */
+
+    .contact-form-box {
+        background: #f8f3ec;
+        padding: 45px;
+        border: 1px solid #eadfce;
+    }
+
+    .contact-form-box h3 {
+        color: #111;
+        font-size: 30px;
+        font-weight: 400;
+        margin: 0 0 10px;
+    }
+
+    .contact-form-box > p {
+        color: #444;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .form-group label {
+        display: block;
+        color: #111;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px 15px;
+        border: 1px solid #d7c9b5;
+        background: #fff;
+        color: #111;
+        font-family: inherit;
+        font-size: 14px;
+        outline: none;
+        transition: .3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+        border-color: #b98637;
+        box-shadow: 0 0 0 2px rgba(185,134,55,.10);
+    }
+
+    .form-group textarea {
+        min-height: 140px;
+        resize: vertical;
+    }
+
+    .form-submit {
+        width: 100%;
+        border: none;
+        padding: 16px 25px;
+        background: #111;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        letter-spacing: 1px;
+        transition: .3s ease;
+    }
+
+    .form-submit:hover {
+        background: #c49445;
+    }
+
+
+    /* =========================================
+       FAQ / HELP
+    ========================================= */
+
+    .contact-help {
+        padding: 100px 7%;
+        background: #f7efe3;
+        text-align: center;
+    }
+
+    .contact-help .eyebrow {
+        color: #a16c21;
+        font-size: 12px;
+        letter-spacing: 3px;
+        margin-bottom: 14px;
+    }
+
+    .contact-help h2 {
+        color: #111;
+        font-size: clamp(36px, 5vw, 56px);
+        font-weight: 400;
+        margin: 0 0 50px;
+    }
+
+    .help-grid {
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 22px;
+    }
+
+    .help-card {
+        background: white;
+        padding: 35px 25px;
+        border: 1px solid #eadbc5;
+    }
+
+    .help-card h3 {
+        color: #111;
+        margin: 0 0 12px;
+        font-size: 21px;
+    }
+
+    .help-card p {
+        color: #333;
+        line-height: 1.8;
+        margin: 0;
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 850px) {
+
+        .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+
+        .help-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .contact-form-box {
+            padding: 30px;
+        }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+        .contact-hero {
+            min-height: 480px;
+        }
+
+        .contact-hero img {
+            min-height: 480px;
+        }
+
+        .contact-hero-content {
+            left: 7%;
+            right: 7%;
+        }
+
+        .contact-hero-content h1 {
+            font-size: 48px;
+        }
+
+        .contact-hero-content p {
+            font-size: 15px;
+        }
+
+        .contact-section {
+            padding: 70px 5%;
+        }
+
+        .contact-help {
+            padding: 70px 5%;
+        }
+
+        .contact-form-box {
+            padding: 25px 20px;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- TOP BAR -->
+
+<div class="top-bar">
+    Complimentary delivery on orders over Rs. 15,000
+</div>
+
+
+<!-- HEADER -->
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+        <button
+            class="mobile-menu-btn"
+            type="button"
+            aria-label="Open menu">
+            ☰
+        </button>
+
+
+        <a href="index.html" class="logo">
+            ZAVELLA<span>.</span>
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="shop.html">
+                Shop
+            </a>
+
+            <a href="collections.html">
+                Collections
+            </a>
+
+            <a href="rings.html">
+                Rings
+            </a>
+
+            <a href="earings.html">
+                Earrings
+            </a>
+
+            <a href="bracelets.html">
+                Bracelets
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html" class="active">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <a
+                href="cart.html"
+                class="header-action cart-link"
+                aria-label="Shopping bag">
+
+                ♡
+
+                <span class="cart-count">
+                    0
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     CONTACT HERO
+========================================= -->
+
+<section class="contact-hero">
+
+    <img
+        src="images/shop-banner.jpg"
+        alt="ZAVELLA jewellery">
+
+    <div class="contact-hero-overlay"></div>
+
+    <div class="contact-hero-content">
+
+        <div class="eyebrow">
+            WE ARE HERE FOR YOU
+        </div>
+
+        <h1>
+            Let's Talk.
+        </h1>
+
+        <p>
+            Have a question about an item, an order,
+            or simply want to know more about ZAVELLA?
+            We'd love to hear from you.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CONTACT MAIN
+========================================= -->
+
+<section class="contact-section">
+
+    <div class="contact-grid">
+
+
+        <!-- CONTACT INFO -->
+
+        <div class="contact-info">
+
+            <div class="eyebrow">
+                GET IN TOUCH
+            </div>
+
+            <h2>
+                We'd Love To Hear From You.
+            </h2>
+
+            <p>
+                For orders, product questions, custom
+                requests or any other enquiry, contact
+                us directly through WhatsApp.
+            </p>
+
+
+            <div class="contact-detail">
+
+                <div class="contact-icon">
+                    ☎
+                </div>
+
+                <div>
+
+                    <h4>
+                        WhatsApp
+                    </h4>
+
+                    <a
+                        href="https://wa.me/923237958455"
+                        target="_blank">
+
+                        +92 323 7958455
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-detail">
+
+                <div class="contact-icon">
+                    ✉
+                </div>
+
+                <div>
+
+                    <h4>
+                        Customer Support
+                    </h4>
+
+                    <p>
+                        Available for jewellery
+                        questions and orders.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-detail">
+
+                <div class="contact-icon">
+                    ⏰
+                </div>
+
+                <div>
+
+                    <h4>
+                        Response Time
+                    </h4>
+
+                    <p>
+                        We aim to respond as soon
+                        as possible.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="whatsapp-box">
+
+                <h3>
+                    Prefer WhatsApp?
+                </h3>
+
+                <p>
+                    Send us your question or order
+                    details directly and our team
+                    will assist you.
+                </p>
+
+                <a
+                    href="https://wa.me/923237958455"
+                    target="_blank"
+                    class="whatsapp-btn">
+
+                    Chat On WhatsApp →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="contact-form-box">
+
+            <h3>
+                Send An Enquiry
+            </h3>
+
+            <p>
+                Fill in your details and we'll
+                prepare a WhatsApp message for you.
+            </p>
+
+
+            <form
+                id="contactForm"
+                onsubmit="sendContactWhatsApp(event)"
+            >
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="03XX XXXXXXX"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="subject">
+                        What can we help with?
+                    </label>
+
+                    <select id="subject" required>
+
+                        <option value="">
+                            Select an option
+                        </option>
+
+                        <option value="Product enquiry">
+                            Product Enquiry
+                        </option>
+
+                        <option value="Order enquiry">
+                            Order Enquiry
+                        </option>
+
+                        <option value="Custom jewellery">
+                            Custom Jewellery
+                        </option>
+
+                        <option value="General question">
+                            General Question
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="form-submit">
+
+                    SEND VIA WHATSAPP →
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     HELP SECTION
+========================================= -->
+
+<section class="contact-help">
+
+    <div class="eyebrow">
+        QUICK HELP
+    </div>
+
+    <h2>
+        How Can We Help?
+    </h2>
+
+
+    <div class="help-grid">
+
+
+        <div class="help-card">
+
+            <h3>
+                Orders
+            </h3>
+
+            <p>
+                Need help placing an order?
+                Message us on WhatsApp and
+                we'll guide you through it.
+            </p>
+
+        </div>
+
+
+        <div class="help-card">
+
+            <h3>
+                Jewellery Questions
+            </h3>
+
+            <p>
+                Ask us about sizes, designs,
+                availability or any product
+                details before purchasing.
+            </p>
+
+        </div>
+
+
+        <div class="help-card">
+
+            <h3>
+                Custom Requests
+            </h3>
+
+            <p>
+                Looking for something special?
+                Contact us and tell us what
+                you have in mind.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo">
+                ZAVELLA<span>.</span>
+            </a>
+
+            <p>
+                Timeless jewellery for modern women.
+                Discover refined pieces designed
+                to become part of your story.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Shop
+            </h4>
+
+            <a href="shop.html">
+                All Jewellery
+            </a>
+
+            <a href="rings.html">
+                Rings
+            </a>
+
+            <a href="earings.html">
+                Earrings
+            </a>
+
+            <a href="bracelets.html">
+                Bracelets
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Information
+            </h4>
+
+            <a href="about.html">
+                Our Story
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="#">
+                Shipping & Returns
+            </a>
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Connect
+            </h4>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                Facebook
+            </a>
+
+            <a href="#">
+                Pinterest
+            </a>
+
+            <a
+                href="https://wa.me/923237958455"
+                target="_blank">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 ZAVELLA. All Rights Reserved.
+        </span>
+
+        <span>
+            Luxury Jewellery
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP FLOAT -->
+
+<a
+    href="https://wa.me/923237958455"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="WhatsApp ZAVELLA">
+
+    ☎
+
+</a>
+
+
+<div class="toast"></div>
+
+
+<script src="script.js"></script>
+
+
+<!-- CONTACT WHATSAPP SCRIPT -->
+
+<script>
+
+    function sendContactWhatsApp(event) {
+
+        event.preventDefault();
+
+        const name =
+            document.getElementById("name").value.trim();
+
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        const subject =
+            document.getElementById("subject").value;
+
+        const message =
+            document.getElementById("message").value.trim();
+
+
+        const whatsappNumber =
+            "923237958455";
+
+
+        const whatsappMessage =
+            "Hello ZAVELLA!%0A%0A" +
+            "*Name:* " +
+            encodeURIComponent(name) +
+            "%0A" +
+            "*Phone:* " +
+            encodeURIComponent(phone) +
+            "%0A" +
+            "*Enquiry:* " +
+            encodeURIComponent(subject) +
+            "%0A%0A" +
+            "*Message:*%0A" +
+            encodeURIComponent(message);
+
+
+        const whatsappURL =
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            whatsappMessage;
+
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    }
+
+</script>
+
+</body>
+
+</html>
